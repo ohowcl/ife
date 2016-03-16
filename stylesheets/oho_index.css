@@ -1,0 +1,16 @@
+div#logo {
+    position: fixed;
+    box-shadow: 3px 3px 2px #006FC4;
+    top: 30px;
+    left: 100px;
+    width: 100px;
+    height: 100px;
+}
+
+#logo img {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}

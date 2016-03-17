@@ -1,10 +1,12 @@
 div#logo {
     position: fixed;
-    box-shadow: 3px 3px 2px #006FC4;
+    box-shadow: 1px 1px 1px #006FC4;
     top: 30px;
     left: 100px;
     width: 100px;
     height: 100px;
+    border-radius: 25px;
+    overflow: hidden;
 }
 
 #logo img {

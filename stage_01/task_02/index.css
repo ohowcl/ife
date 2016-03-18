@@ -1,0 +1,168 @@
+* {
+  font-family: Microsoft YaHei;
+}
+body{
+  margin: 0px;
+  background-color: Gainsboro;
+}
+header img{
+  float: left;
+  width: 16%;
+  height: 100%;
+  text-align: center;
+}
+#header1{
+  background: black;
+  height: 90px;
+}
+nav ul{
+  float: right;
+  margin-right: 15px;
+  text-align: center;
+}
+nav ul li{
+  float: left;
+  padding: 8px;
+}
+
+nav a:link{
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover{
+  color: yellow;
+  text-decoration: underline;
+}
+
+nav a:visited{
+  color: Gainsboro;
+  text-decoration:underline;
+}
+
+#logo{
+  width: 70px;
+  height: 60px;
+  position:fixed;
+}
+section{
+  background: white;
+  display: block;
+  margin: 25px;
+  padding: 15px;
+  box-shadow: 3px 3px 3px #848484;
+}
+#aside1{
+  width:93%;
+}
+h3,span{
+  color: gray;
+}
+span{
+  font-size: 15px;
+}
+p{
+  text-indent: 2em;
+  line-height: 150%;
+}
+ul{
+  list-style: none;
+  line-height: 150%;
+}
+li{
+  line-height: 150%;
+}
+
+figure{
+  width: 130px;
+  border: 1px solid Gainsboro;
+}
+figure img{
+  width: 100px;
+  border: 0px;
+  padding: 15px;
+}
+figcaption{
+  padding-top: 10px;
+  text-align: center;
+}
+
+table{
+  width: 95%;
+  font-size: 13px;
+  line-height: 23px;
+  text-align: left;
+}
+table,th,tr,td{
+  border: 1px solid Gainsboro;
+  border-collapse: collapse;
+}
+table th{
+  text-align: left;
+  padding: 5px;
+}
+table td{
+  padding: 5px;
+}
+thead{
+  color: white;
+  background-color: black;
+}
+tfoot{
+  background: Gainsboro;
+  font-weight: bolder;
+}
+aside{
+  padding:5px;
+  border-left: 3px solid Gainsboro;
+  font-weight: bolder;
+}
+form{
+  line-height: 30px;
+  text-align: center;
+}
+fieldset{
+  border: 0px;
+}
+fieldset div.item-name{
+  width: 40%;
+  height:10px;
+  float: left;
+  text-align: right;
+  padding-right: 20px;
+}
+
+fieldset div.item-content{
+  float: left;
+  text-align: left;
+}
+
+fieldset div.item-tip{
+  float: left;
+  text-align: left;
+  color: grey;
+  font-size: 12px;
+}
+
+textarea{
+  width: 500px;
+  height:100px;
+}
+#button{
+  width: 95%;
+  height: 40px;
+  background:SteelBlue;
+  color: white;
+  font-size: 110%;
+  border-radius: 10px;
+  text-align: center;
+}
+footer{
+  background: black;
+  text-align: center;
+  height: 130%;
+}
+footer p{
+  color: white;
+  padding: 20px;
+}

@@ -1,0 +1,30 @@
+body{
+  margin: 0px;
+}
+#container{
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  background: #ccc;
+  margin: -100px 0 0 -200px;
+  left: 50%;
+  top:50%;
+  overflow: hidden;
+}
+
+#round1,#round2{
+  width: 100px;
+  height: 100px;
+  background: #fc0;
+  border-radius: 50px;
+  position: relative;
+}
+
+#round1{
+  top: -50px;
+  left: -50px;
+}
+#round2{
+  bottom: -50px;
+  right: -350px;
+}

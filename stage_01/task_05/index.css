@@ -1,0 +1,165 @@
+* {
+  font-family: Arial;
+}
+body {
+  margin: 0px;
+  background-color: Gainsboro;
+}
+body > header {
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  background-color: #333333;
+}
+body > header #logo {
+  float: left;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+}
+body > header #logo img {
+  height: 100%;
+}
+body > header nav {
+  margin-right: 10px;
+  float: right;
+}
+body > header nav li {
+  width: 100px;
+  float: left;
+  color: white;
+}
+body > header nav li a:link {
+  text-decoration: none;
+  color: white;
+}
+body > header nav li a:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+body > header nav li a:visited {
+  text-decoration: underline;
+  color: #979D9D;
+}
+body > section {
+  margin: 20px 2% 0px 2%;
+  padding: 20px 15px;
+  background-color: white;
+  box-shadow: 3px 3px 3px #959595;
+  float: left;
+  width: 60%;
+}
+body > section .subtitle {
+  font-size: medium;
+  color: #777568;
+}
+body > section .author {
+  font-size: small;
+  color: #ADAEAD;
+}
+body > section .pub-time {
+  font-size: small;
+  color: #ADAEAD;
+}
+body > section #project-list {
+  list-style-type: none;
+}
+body > section p {
+  line-height: 1.8;
+}
+body > section figure {
+  border: 1px solid Gainsboro;
+  width: 200px;
+  padding: 20px;
+}
+body > section figure img {
+  display: block;
+  width: 160px;
+  margin-right: auto;
+  margin-left: auto;
+}
+body > section figure figcaption {
+  text-align: center;
+  margin-bottom: 10px;
+}
+body > section table {
+  border: solid 1px Gainsboro;
+  width: 100%;
+  border-collapse: collapse;
+}
+body > section table th,
+body > section table td {
+  border: solid 1px Gainsboro;
+  padding: 4px;
+}
+body > section table thead {
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+body > section table tfoot {
+  background-color: Gainsboro;
+}
+body #sidebar {
+  margin: 20px 2% 0px 0px;
+  padding: 20px 15px;
+  background-color: white;
+  box-shadow: 3px 3px 3px #959595;
+  width: 27%;
+  float: left;
+}
+body #sidebar nav {
+  border-left: 3px solid Gainsboro;
+  overflow: auto;
+  padding-left: 20px;
+}
+body #sidebar form fieldset {
+  border: none;
+  text-align: center;
+}
+body #sidebar form fieldset .item-name {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  display: inline-block;
+  width: 40%;
+  text-align: right;
+}
+body #sidebar form fieldset .item-content {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  display: inline-block;
+  width: 55%;
+  height: auto;
+  text-align: left;
+  margin-right: 0px;
+}
+body #sidebar form fieldset .item-hint {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  font-size: small;
+  color: Gainsboro;
+}
+body #sidebar form fieldset input[type="submit"] {
+  width: 100%;
+  height: 40px;
+  background-color: #3355D0;
+  font-size: large;
+  color: white;
+  border-radius: 10px;
+}
+body #sidebar form fieldset textarea {
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 100px;
+  vertical-align: text-top;
+}
+body > footer {
+  float: left;
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: white;
+  background-color: #000000;
+  overflow: auto;
+}

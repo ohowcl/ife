@@ -54,8 +54,7 @@ body{
   background-color: #418c59;
   float: left;
   opacity: 0.5;
-  position: relative;
-  top: -304px;
+  margin-top: -304px;
 }
 .p2red{
   width: 191px;
@@ -63,8 +62,7 @@ body{
   background-color: #cc7680;
   float: right;
   opacity: 0.5;
-  position: relative;
-  top: -304px;
+  margin-top: -304px;
 }
 #part-3{
   float:right;
@@ -134,8 +132,8 @@ body{
   height: 61px;
   margin: 0px 44px 0px 44px;
   overflow: auto;
-  position: relative;
-  top: 622px;
+  position: relative;;
+  bottom: -53px;
 }
 .p8foot{
   float: right;

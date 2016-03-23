@@ -1,0 +1,35 @@
+#part-6 {
+  width: 458px;
+  height: 275px;
+  background-image: url(right-bottom.png);
+  background-size: 100% 100%;
+  position: relative;
+  float: right;
+  margin-top: -600px;
+  margin-right: 44px;
+}
+#part-6 #p6down-bar {
+  position: absolute;
+  bottom: 0px;
+  width: 458px;
+  height: 61px;
+  background-color: rgba(1, 1, 1, 0.7);
+}
+#part-6 #p6down-bar #p6content {
+  height: 26px;
+  border-left: 3px solid #72b16a;
+  margin-top: 8px;
+  margin-left: 30px;
+  padding: 9px;
+  position: static;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#part-6 #p6down-bar #p6content #p6title {
+  font-size: 26px;
+  color: #ffffff;
+}
+#part-6 #p6down-bar #p6content #p6desc {
+  font-size: 12px;
+  color: #72b16a;
+  word-spacing: 140%;
+}

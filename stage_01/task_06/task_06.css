@@ -127,13 +127,14 @@ body{
   font-family: SimHei;
   font-weight: bolder;
   font-style: italic;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 #part-5 #p5header .p5header-2{
   font-size: 42px;
   color: #11456b;
   font-family: SimHei;
   font-weight: bolder;
+  line-height: 16px;
 }
 #part-5 #p5header #p5header-3{
   font-size: 33px;

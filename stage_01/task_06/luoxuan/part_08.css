@@ -1,0 +1,13 @@
+#part-8 {
+  width: 892px;
+  position: relative;
+  border-top: 1px solid #938e8c;
+}
+#part-8 #p8right {
+  position: absolute;
+  top: 0px;
+  right: 2px;
+  font-size: 12px;
+  font-family: "Times New Roman", Times, serif;
+  color: #d45d5c;
+}

@@ -1,0 +1,98 @@
+#part-7 {
+    width: 459px;
+    height: 318px;
+    background-color: #E9EACC;
+    position: relative;
+    #p7list {
+        width: 459px;
+        height: 158px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        ul {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            li {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                text-align: left;
+                list-style-type: none;
+                font-size: 20px;
+                font-family: "Times New Roman", Times, serif;
+                &:before {
+                    content: "";
+                    border-color: #111 transparent;
+                    border-style: solid;
+                    border-width: 0 0.35em 0.45em 0.35em;
+                    display: block;
+                    height: 0;
+                    width: 0;
+                    left: -1em;
+                    top: 1em;
+                    position: relative;
+                }
+            }
+        }
+    }
+    #p7title {
+        width: 240px;
+        height: 90px;
+        padding: 35px 10px;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        background-color: #BD4641;
+        color: #ffffff;
+        #p7zero {
+            border-right: 2px solid #fff;
+            height: 90px;
+            float: left;
+            font-size: 110px;
+            margin-right: 10px;
+        }
+        #p7zero-left {
+            height: 90px;
+            margin-left: 0px;
+            .p7zero-left-big {
+                font-size: 21px;
+                margin: 6px 0px 0px 0px;
+            }
+            .p7zero-left-small {
+                font-size: 12px;
+                margin: 6px 0px;
+            }
+        }
+    }
+    #p7desc {
+        width: 169px;
+        height: 140px;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        padding: 10px 15px;
+        font-size: 14px;
+        color: #5a5b5b;
+        p {
+            line-height: 18px;
+            margin: 8px 0px;
+            font-family: "Times New Roman", Times, serif;
+            font-style: italic;
+        }
+        #p7quotation-top {
+            font-size: 72px;
+            color: #d45d5c;
+            float: left;
+            height: 20px;
+            margin-left: -44px;
+            margin-right: 5px;
+            margin-top: -8px;
+        }
+        #p7quotation-bottom {
+            font-size: 72px;
+            color: #d45d5c;
+            float: right;
+            margin-right: -44px;
+            margin-top: -26px;
+        }
+    }
+}

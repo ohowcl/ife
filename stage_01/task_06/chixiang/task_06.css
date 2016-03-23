@@ -72,6 +72,7 @@
   margin-left: 44px;
   overflow: hidden;
   width: 415px;
+  float: left;
 }
 #part-5 #p5header{
   margin-top: 30px;

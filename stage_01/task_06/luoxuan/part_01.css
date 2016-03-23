@@ -1,0 +1,29 @@
+#part-1 {
+  width: 892px;
+  border-bottom: 2px solid #938e8c;
+  overflow: auto;
+  position: relative;
+}
+#part-1 #p1left {
+  width: 110px;
+  height: 61px;
+  float: left;
+  position: relative;
+  background-color: #d45d5c;
+}
+#part-1 #p1left span {
+  position: absolute;
+  left: 2px;
+  bottom: 0px;
+  color: #ffffff;
+  font-size: 12px;
+  font-family: "Times New Roman", Times, serif;
+}
+#part-1 #p1right {
+  position: absolute;
+  bottom: 0px;
+  right: 2px;
+  font-size: 12px;
+  font-family: "Times New Roman", Times, serif;
+  color: #d45d5c;
+}

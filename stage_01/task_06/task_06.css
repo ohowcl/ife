@@ -1,0 +1,187 @@
+body{
+  margin: 0px;
+}
+#contents{
+  height: 1386px;
+  width: 980px;
+  margin: auto;
+  background-color: white;
+  position: relative;
+}
+#part-1{
+  height: 61px;
+  width: 892px;
+  margin-left: 44px;
+  margin-right: 44px;
+  border-bottom: 2px solid #938e8c;
+  margin-bottom: 5px;
+  position: relative;
+}
+#part-1 #p1title{
+  width: 110px;
+  height: 61px;
+  background: #d45d5c;
+  position: relative;
+  float: left;
+}
+#part-1 #p1title span{
+  font-size: 12px;
+  color: #ffffff;
+  font-family: SimHei;
+  position: absolute;
+  bottom: 4px;
+  left: 6px;
+}
+#part-1 #p1date{
+  float: right;
+  font-size: 12px;
+  color: #d45d5c;
+  font-family: SimHei;
+  position: absolute;
+  bottom: 5px;
+  right: 6px;
+}
+#part-4{
+  width: 641px;
+  margin-left: 44px;
+  overflow: hidden;
+}
+#part-4 #p4left{
+  width: 35%;
+  margin-right: 5%;
+  float: left;
+}
+#part-4 #p4left #p4left-title{
+  font-size: 16px;
+  color: #418c59;
+  font-family: Microsoft YaHei;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+#part-4 #p4left #p4left-content{
+  font-size: 12px;
+  color: #767777;
+  font-family: SimSun;
+  line-height: 16px;
+  letter-spacing: 1px;
+}
+#part-4 #p4middle{
+  width: 30%;
+  margin-right: 5%;
+  float: left;
+}
+#part-4 #p4middle #p4middle-title{
+  font-size: 16px;
+  color: #d2994f;
+  font-family: Microsoft YaHei;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+#part-4 #p4middle #p4middle-content{
+  font-size: 12px;
+  color: #231815;
+  font-family: Microsoft YaHei;
+  line-height: 16px;
+  opacity: 70%;
+  letter-spacing: 1px;
+}
+#part-4 #p4right{
+  width: 25%;
+  float: left;
+}
+#part-4 #p4right #p4right-title{
+  font-size: 16px;
+  color: #cc7680;
+  font-family: Microsoft YaHei;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+#part-4 #p4right #p4right-content{
+  font-size: 12px;
+  color: #231815;
+  font-family: Microsoft YaHei;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+#part-4 #p4right #p4right-content .p4right-content2-1{
+  font-size: 12px;
+  color: #cd4a48;
+  font-family: Microsoft YaHei;
+  opacity: 70%;
+  font-style: italic;
+}
+
+#part-5{
+  margin-left: 44px;
+  overflow: hidden;
+  width: 415px;
+}
+#part-5 #p5header{
+  margin-top: 30px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid black;
+}
+#part-5 #p5header #p5header-1{
+  font-size: 72px;
+  color: #f5e327;
+  font-family: SimHei;
+  font-weight: bolder;
+  font-style: italic;
+  margin-right: 10px;
+}
+#part-5 #p5header .p5header-2{
+  font-size: 42px;
+  color: #11456b;
+  font-family: SimHei;
+  font-weight: bolder;
+  line-height: 16px;
+}
+#part-5 #p5header #p5header-3{
+  font-size: 33px;
+  color: #11456b;
+  font-family: SimHei;
+  font-weight: bolder;
+}
+#part-5 #p5content{
+  font-size: 12px;
+  color: #767777;
+  font-family:SimSun;
+  position: relative;
+  overflow: hidden;
+}
+#part-5 #p5content p{
+  line-height: 16px;
+  letter-spacing: 1px;
+  margin: 1px;
+}
+#part-5 #p5content #p5content-1 span{
+  font-size: 70px;
+  color: #f5e327;
+  font-family: Microsoft YaHei;
+  border-right: 5px;
+  float: left;
+  line-height: 70px;
+}
+#part-5 #p5content #p5content-1 img{
+  margin: 13px 0px 13px 13px;
+  width: 40%;
+  float: right;
+}
+#part-5 #p5content .p5content-2{
+  text-indent: 2em;
+}
+#part-8{
+  width: 892px;
+  height: 61px;
+  position: absolute;
+  bottom: 0px;
+  border-top: 1px solid #938e8c;
+  margin-left: 44px;
+  margin-right: 44px;
+}
+#part-8 span{
+  font-size: 12px;
+  color: #d45d5c;
+  font-family: SimHei;
+  float: right;
+}

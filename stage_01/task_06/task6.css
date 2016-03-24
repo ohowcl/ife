@@ -8,8 +8,8 @@ body{
   height: 1386px;
   width: 980px;
   margin: auto;
-  background-color: white;
   position: relative;
+  overflow: hidden;
 }
 #part-1{
   height: 61px;

@@ -1,0 +1,95 @@
+#part-10 {
+  background-color: #33363F;
+  width: 1280px;
+  height: 325px;
+  padding-top: 80px;
+}
+#part-10 #p10up {
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+#part-10 #p10up #p10up-title {
+  font-size: larger;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#part-10 #p10up #p10up-desc {
+  font-size: xx-small;
+}
+#part-10 #p10up #p10up-desc p {
+  margin: 3px 0px;
+}
+#part-10 #p10mid {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+#part-10 #p10mid form {
+  width: 490px;
+  display: inline-block;
+}
+#part-10 #p10mid form #p10mid-input {
+  float: left;
+}
+#part-10 #p10mid form #p10mid-input input {
+  background-color: #fff;
+  height: 35px;
+  width: 390px;
+  font-size: 15px;
+  padding: 3px 10px;
+  border: 0px;
+}
+#part-10 #p10mid form #p10mid-submit {
+  float: left;
+}
+#part-10 #p10mid form #p10mid-submit input {
+  background-color: #54565f;
+  height: 41px;
+  width: 70px;
+  font-size: 18px;
+  color: #fff;
+  border: 0px;
+  margin: 0px;
+}
+#part-10 #p10mid form #p10mid-submit input:hover {
+  cursor: pointer;
+}
+#part-10 #p10down {
+  text-align: center;
+  margin-top: 40px;
+}
+#part-10 #p10down .p10down-icon {
+  display: inline-block;
+}
+#part-10 #p10down .p10down-icon img {
+  width: 25px;
+  height: 25px;
+  margin: 0px 10px;
+}
+footer {
+  width: 1280px;
+  height: 10px;
+  padding: 20px 0px;
+  background-color: #23262F;
+  position: relative;
+}
+footer #p10footer {
+  font-size: 8px;
+  color: white;
+  margin-left: 50px;
+}
+footer #p10back-top {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+footer #p10back-top button {
+  background-color: #23262F;
+  color: white;
+  border: 0px;
+}
+footer #p10back-top button:hover {
+  cursor: pointer;
+}

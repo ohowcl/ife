@@ -1,0 +1,62 @@
+body{
+  margin: 0px;
+}
+#part-1{
+  width: 1280px;
+  position: relative;
+  height: 80px;
+}
+#part-1 img{
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  width: 30px;
+  height:30px;
+  font-size: 28px;
+  float: left;
+}
+#part-1 #p1title{
+  position: absolute;
+  left: 88px;
+  bottom: 20px;
+  font-size: 28px;
+  float: left;
+  font-family: Times New Roman;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+#part-1 nav{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 18px;
+  float: right;
+  height: 100%;
+}
+#part-1 nav ul li{
+  float: left;
+  margin-right: 30px;
+  height: 50%;
+  position: relative;
+  top: 40px;
+}
+#part-1 nav ul li a{
+  margin-top: 30px;
+}
+#part-1 nav ul li:last-child:before{
+  content: url("part-1\per.png");
+  padding-right: 3px;
+}
+#part-1 nav ul li a:link{
+  text-decoration: none;
+  color:#6e6e6e;
+}
+#part-1 nav ul li a:hover{
+  text-decoration:underline;
+  color: #ff6a6a;
+}
+#part-1 nav ul li a:active{
+  text-decoration: underline;
+  color: #ff6a6a;
+}

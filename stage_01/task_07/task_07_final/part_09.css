@@ -1,0 +1,107 @@
+#part-9 {
+  width: 1280px;
+  height: 650px;
+  text-align: center;
+}
+#part-9 #p9head {
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 100px;
+}
+#part-9 #p9head #p9title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+#part-9 #p9head #p9desc {
+  width: 100%;
+}
+#part-9 #p9head #p9desc p {
+  text-align: center;
+  font-size: small;
+  color: #ccc;
+  margin: 3px 0px;
+}
+#part-9 #p9content {
+  width: 80%;
+  margin: 80px auto 0px auto;
+  overflow: auto;
+}
+#part-9 #p9content #p9content-left {
+  overflow: hidden;
+  width: 280px;
+  padding: 20px;
+  float: left;
+}
+#part-9 #p9content #p9content-left .p9provision {
+  margin: 10px 0px 50px;
+  width: 100%;
+}
+#part-9 #p9content #p9content-left .p9provision .p9provision-title {
+  font-weight: bold;
+  font-size: medium;
+  text-align: left;
+  color: #888;
+}
+#part-9 #p9content #p9content-left .p9provision .p9provision-content {
+  font-size: x-small;
+  color: #ccc;
+  margin-top: 20px;
+  text-align: left;
+}
+#part-9 #p9content #p9content-left .p9provision .p9provision-footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #ccc;
+}
+#part-9 #p9content #p9content-right {
+  overflow: hidden;
+  width: 600px;
+  padding: 20px;
+  float: left;
+}
+#part-9 #p9content #p9content-right form fieldset {
+  border: 0px;
+  margin: 10px 10px;
+}
+#part-9 #p9content #p9content-right form fieldset .p9input {
+  background-color: #eee;
+  padding: 10px 2.5%;
+  text-align: left;
+}
+#part-9 #p9content #p9content-right form fieldset .p9input span {
+  font-size: xx-small;
+  font-weight: bold;
+  color: #aaa;
+}
+#part-9 #p9content #p9content-right form fieldset .p9input input {
+  background-color: #eee;
+  border: 0px;
+}
+#part-9 #p9content #p9content-right form fieldset .p9input textarea {
+  display: block;
+  width: 100%;
+  margin: auto;
+  min-height: 80px;
+  max-height: 80px;
+  border: 0px;
+  background-color: #eee;
+  resize: none;
+}
+#part-9 #p9content #p9content-right form fieldset .p9input input[type=submit] {
+  width: 100%;
+  font-size: medium;
+  font-weight: bold;
+  color: black;
+}
+#part-9 #p9content #p9content-right form fieldset .p9form-item-left {
+  width: 42%;
+  margin-right: 5%;
+  float: left;
+}
+#part-9 #p9content #p9content-right form fieldset .p9form-item-right {
+  width: 42%;
+  float: left;
+}

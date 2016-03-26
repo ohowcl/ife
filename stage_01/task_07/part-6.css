@@ -1,0 +1,77 @@
+#part-6{
+  width: 1280px;
+  height: 600px;
+  position: relative;
+  background: #f2f2f2;
+}
+#part-6 #p6content1,#part-6 #p6content2,#part-6 #p6content3,#part-6 #p6content4{
+  width: 217.6px;
+  height: 390px;
+  float: left;
+}
+#part-6 #p6content1{
+  position: absolute;
+  left:128px;
+  top:105px;
+  right: 51.2px;
+}
+#part-6 #p6content1 #p6c1-1,
+#part-6 #p6content2 #p6c2-1,
+#part-6 #p6content3 #p6c3-1,
+#part-6 #p6content4 #p6c4-1{
+  border: 1px solid #f2f2f2;
+  width: 100%;
+  height: 80%;
+  background: white;
+}
+#part-6 #p6content1 #p6c1-1 #p6c1-img,
+#part-6 #p6content2 #p6c2-1 #p6c2-img,
+#part-6 #p6content3 #p6c3-1 #p6c3-img,
+#part-6 #p6content4 #p6c4-1 #p6c4-img{
+  width: 92%;
+  height: 92%;
+  margin: 4% 4% 4% 4%;
+}
+#part-6 #p6content1 #p6c1-2 p,
+#part-6 #p6content2 #p6c2-2 p,
+#part-6 #p6content3 #p6c3-2 p,
+#part-6 #p6content4 #p6c4-2 p{
+  text-align: center;
+  font-family: SimHei;
+}
+#part-6 #p6content1 #p6c1-2 #p6c1-2-2,
+#part-6 #p6content2 #p6c2-2 #p6c2-2-2,
+#part-6 #p6content3 #p6c3-2 #p6c3-2-2,
+#part-6 #p6content4 #p6c4-2 #p6c4-2-2{
+  color: grey;
+  font-size: 13px;
+}
+#part-6 #p6content2{
+  position: absolute;
+  /*border: 1px solid black;*/
+  left: 400px;
+  top:105px;
+}
+#part-6 #p6content2 #p6c2-1{
+  /*border: 1px solid black;*/
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+#part-6 #p6content2 #p6c2-2 #p6c2-2-1{
+  font-size: 25px;
+  letter-spacing: 25px;
+  margin: 0px;
+}
+#part-6 #p6content3{
+  position: absolute;
+  /*border: 1px solid black;*/
+  right: 390px;
+  top:105px;
+}
+#part-6 #p6content4{
+  position: absolute;
+  /*border: 1px solid black;*/
+  right: 120px;
+  top:105px;
+}

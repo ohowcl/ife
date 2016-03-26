@@ -2,6 +2,7 @@
   width: 1280px;
   height: 650px;
   text-align: center;
+  border: 1px solid black;
 }
 #part-9 #p9head {
   width: 100%;
@@ -57,6 +58,7 @@
   color: #ccc;
 }
 #part-9 #p9content #p9content-right {
+  border:1px solid black;
   overflow: hidden;
   width: 600px;
   padding: 20px;

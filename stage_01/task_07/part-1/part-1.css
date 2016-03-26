@@ -45,7 +45,7 @@ body{
   margin-top: 30px;
 }
 #part-1 nav ul li:last-child:before{
-  content: url("per.png");
+  content: url("part-1\per.png");
   padding-right: 3px;
 }
 #part-1 nav ul li a:link{

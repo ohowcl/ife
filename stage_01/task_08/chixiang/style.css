@@ -1,0 +1,39 @@
+body{
+  margin: 10px;
+}
+.row div{
+  border-color: #999;
+  border-width: 1px;
+  border-style: solid;
+  background: #eee;
+  margin: 10px;
+  height: 50px;
+  float: left;
+}
+.col-sm-1{width: calc((100% - 240px - 24px)/12);}
+.col-sm-2{width: calc((100% - 120px - 12px)/6);}
+.col-sm-3{width: calc((100% - 80px - 8px)/4);}
+.col-sm-4{width: calc((100% - 60px - 6px)/3);}
+.col-sm-5{width: calc((500% - 240px - 24px)/12);}
+.col-sm-6{width: calc((100% - 40px - 4px)/2);}
+.col-sm-7{width: calc((700% - 240px - 24px)/12);}
+.col-sm-8{width: calc((200% - 60px - 6px)/3);}
+.col-sm-9{width: calc((300% - 80px - 8px)/4);}
+.col-sm-10{width: calc((500% - 120px - 12px)/6);}
+.col-sm-11{width: calc((1100% - 240px - 24px)/12);}
+.col-sm-12{width: calc(100% - 20px - 2px);}
+
+@media screen and (max-width: 768px)
+{
+  #col1{width: calc((100% - 40px - 4px)/2);}
+  #col2{width: calc((100% - 40px - 4px)/2);}
+  #col3{width: calc(100% - 20px - 2px);}
+  #col4{width: calc((100% - 80px - 8px)/4);}
+  #col5{width: calc((100% - 40px - 4px)/2);}
+  #col6{width: calc((100% - 80px - 8px)/4);}
+  #col7{width: calc((100% - 120px - 12px)/6);}
+  #col8{width: calc((100% - 120px - 12px)/6);}
+  #col9{width: calc((200% - 60px - 6px)/3);}
+  #col10{width: calc((100% - 80px - 8px)/4);}
+  #col11{width: calc((100% - 80px - 8px)/4);}
+}

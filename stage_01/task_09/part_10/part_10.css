@@ -1,0 +1,112 @@
+#part-10 {
+  overflow: auto;
+}
+#part-10 > div {
+  width: 476px;
+  height: 400px;
+  margin: 2px;
+  overflow: hidden;
+  box-shadow: 0px 0px 2px #aaa;
+  border-radius: 10px;
+}
+#part-10 > div #p10up {
+  width: 90%;
+  height: 20px;
+  padding: 10px 5%;
+  background-color: #F1F2F4;
+  color: #aaa;
+}
+#part-10 > div #p10down {
+  width: 90%;
+  padding: 15px 5%;
+}
+#part-10 > div #p10down table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#part-10 > div #p10down table td,
+#part-10 > div #p10down table th {
+  border: 1px solid #aaa;
+  text-align: center;
+  height: 25px;
+}
+#part-10 > div #p10down table tr:hover {
+  background-color: #F1F2F4;
+}
+#part-10 > div #p10down table .progress {
+  width: 200px;
+  height: 5px;
+  float: left;
+  margin-top: 5px;
+  margin-left: 15px;
+  border-radius: 5px;
+  background-color: #ccc;
+}
+#part-10 > div #p10down table .progress .p10progress-value10 {
+  width: 10%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #000096;
+}
+#part-10 > div #p10down table .progress .p10progress-value20 {
+  width: 20%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #142896;
+}
+#part-10 > div #p10down table .progress .p10progress-value30 {
+  width: 30%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #280064;
+}
+#part-10 > div #p10down table .progress .p10progress-value40 {
+  width: 40%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #3c0064;
+}
+#part-10 > div #p10down table .progress .p10progress-value50 {
+  width: 50%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #502864;
+}
+#part-10 > div #p10down table .progress .p10progress-value60 {
+  width: 60%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #640064;
+}
+#part-10 > div #p10down table .progress .p10progress-value70 {
+  width: 70%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #781464;
+}
+#part-10 > div #p10down table .progress .p10progress-value80 {
+  width: 80%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #8c1464;
+}
+#part-10 > div #p10down table .progress .p10progress-value90 {
+  width: 90%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #a0281e;
+}
+#part-10 > div #p10down table .progress .p10progress-value100 {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #c8281e;
+}
+#part-10 > div #p10down table span {
+  width: 80px;
+  height: 15px;
+  display: block;
+  margin-left: 15px;
+  float: left;
+  font-size: 15px;
+}

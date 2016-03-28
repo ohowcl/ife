@@ -1,0 +1,10 @@
+#part-01 {
+  width: 960px;
+  color: #ccc;
+}
+#part-01 span {
+  font-size: small;
+}
+#part-01 .p1active {
+  color: #80A2C5;
+}

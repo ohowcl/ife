@@ -25,10 +25,7 @@
 2. 文件命分为：part_01.html, part_02.html...part_10.html等
 3. 子部分div或section id命名示例：part-01, part-02
 4. 子部分内部元素class或id命名示例：p1idname, p1classname
+5.背景色用#ededed
 
 ### 任务划分图
 ![pic](./task.png)
-
-
-
-

@@ -1,0 +1,80 @@
+body{
+  width: 1280px;
+  margin: auto;
+  background-color: #ededed;
+}
+#part_04{
+  width: 804px;
+  margin: 20px 48px 10px 48px;
+  float: right;
+  background-color: white;
+  border-color: #D3D3D3;
+  border-style: solid;
+  border-width: 1px;
+  padding: 20px 30px 15px 30px;
+}
+#part_04 .p4span{
+  font-size: 12px;
+  color:  #ADADAD;
+}
+#part_04 .p4form1, .p4form2, .p4form3, .p4form4{
+  float: left;
+}
+#part_04 select{
+  margin-left: 10px;
+  margin-right: 40px;
+}
+#part_04 .p4form1 select{
+  height: 25px;
+}
+#part_04 .p4form2 select{
+  width: 120px;
+  height: 25px;
+  margin-bottom: 5px;
+}
+.p4form3{
+  margin-right: -10px;
+}
+.p4pic{
+  position: relative;
+  top: 9px;
+  left: -40px;
+}
+.p4pics{
+  font-size: 12px;
+  color: white;
+  position: relative;
+  top: -6px;
+  left: -53px;
+}
+#part_04 .p4form4 input{
+  width: 120px;
+  height: 20px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-left: 10px;
+}
+#part_04 .p4form4 .p4form4_1 select{
+  width: 60px;
+  height: 25px;
+  margin-bottom: 5px;
+}
+#part_04 .p4sel1{
+  width: 60px;
+  height: 25px;
+  margin-bottom: 5px;
+  margin-right: 9px;
+}
+#part_04 .p4sel2{
+  width: 120px;
+  height: 25px;
+  margin-bottom: 5px;
+}
+#part_04 .p4submit input{
+  background-color: #2189bf;
+  color: white;
+  border: 0px;
+  border-radius: 3px;
+  padding: 5px 12px 5px 12px;
+  margin-top: 15px;
+}

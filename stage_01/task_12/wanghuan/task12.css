@@ -1,0 +1,67 @@
+table{
+  text-align: left;
+}
+table thead th{
+  border: 2px solid white;
+  background: black;
+  color: white;
+  padding: 0px;
+}
+table tbody tr{
+  border: 2px solid white;
+}
+table tbody tr:nth-child(even) {
+  background: grey;
+}
+table tbody tr:nth-child(odd) {
+  background: white;
+}
+table tbody tr:nth-child(1),table tbody tr:nth-child(2),table tbody tr:nth-child(3){
+  color: red;
+}
+
+#div1{
+  width: 200px;
+  height: 100px;
+  background: green;
+  animation-name: animation1;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.div{
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  background: rgba(255,255,255,0.3);
+  border: rgba(255,255,255,0.3) solid white;
+  margin: 1px;
+}
+#div1-1{
+}
+#div1-2{
+
+}
+#div1-3{
+
+}
+@keyframes animation1{
+  0%  {background: green;}
+  50% {;}
+  100% {background: blue;}
+}
+input{
+  width: 100px;
+  height: 20px;
+  border-radius: 5px;
+  margin: 20px;
+}
+input:focus{
+  width: 200px;
+  transition: width 2s;
+  border: #87c6f9 1px solid;
+  box-shadow: 0 0 8px rgba(103,166,217,1);
+}

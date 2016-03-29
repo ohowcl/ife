@@ -1,0 +1,78 @@
+#part-08 {
+    overflow: auto;
+    & > div {
+        width: 331px;
+        height: 400px;
+        margin: 2px;
+        box-shadow: 0px 0px 2px #aaa;
+        overflow: hidden;
+        border-radius: 10px;
+        #p8up {
+            width: 90%;
+            height: 20px;
+            padding: 10px 5%;
+            background-color: #F1F2F4;
+            color: #aaa;
+        }
+        #p8mid {
+            width: 90%;
+            padding: 10px 5%;
+            #p8mid-title {
+                width: 100%;
+                border-bottom: 1px solid #bbb;
+            }
+            #p8mid-miscell {
+                width: 100%;
+                overflow: auto;
+                border-bottom: 1px solid #bbb;
+                #p8mid-miscess-left {
+                    width: 29%;
+                    float: left;
+                    border-right: 1px solid #bbb;
+                }
+                #p8mid-miscess-right {
+                    width: 70%;
+                    float: left;
+                }
+            }
+            #p8mid-desc {
+                width: 100%;
+                height: 140px;
+                border-bottom: 1px solid #bbb;
+            }
+            .p8mid-item-up {
+                height: 20px;
+                line-height: 20px;
+                font-size: 15px;
+                color: #bbb;
+                padding: 5px 5px 0px 5px;
+            }
+            .p8mid-item-down {
+                height: 20px;
+                line-height: 20px;
+                font-size: 13px;
+                padding: 5px 5px 0px 5px;
+            }
+        }
+        #p8down {
+            width: 90%;
+            height: 30px;
+            padding: 0px 5%;
+            label {
+                display: inline-block;
+                float: left;
+                color: #aaa;
+                margin-top: 10px;
+            }
+            input[type="submit"] {
+                display: inline-block;
+                float: right;
+                width: 50px;
+                height: 30px;
+                color: #fff;
+                background-color: #3D8CBF;
+                border: 0px;
+            }
+        }
+    }
+}

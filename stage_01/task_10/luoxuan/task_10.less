@@ -1,0 +1,45 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    ul {
+        margin: 0px;
+        padding: 20px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    @media (min-width: 640px) {
+        ul {
+            align-items: center;
+        }
+    }
+    @media (max-width: 640px) {
+        ul {
+            align-items: flex-start;
+        }
+    }
+    li {
+        list-style: none;
+        width: 150px;
+        margin-top: 20px;
+    }
+    #first {
+        height: 120px;
+        border: 2px solid red;
+    }
+    #second {
+        height: 100px;
+        border: 2px solid red;
+    }
+    #third {
+        height: 40px;
+        border: 2px solid red;
+    }
+    #fourth {
+        height: 200px;
+        border: 2px solid blue;
+        @media (max-width: 640px) {
+            order: -1;
+        }
+    }
+}

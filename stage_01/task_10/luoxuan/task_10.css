@@ -1,0 +1,47 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+body ul {
+  margin: 0px;
+  padding: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+@media (min-width: 640px) {
+  body ul {
+    align-items: center;
+  }
+}
+@media (max-width: 640px) {
+  body ul {
+    align-items: flex-start;
+  }
+}
+body li {
+  list-style: none;
+  width: 150px;
+  margin-top: 20px;
+}
+body #first {
+  height: 120px;
+  border: 2px solid red;
+}
+body #second {
+  height: 100px;
+  border: 2px solid red;
+}
+body #third {
+  height: 40px;
+  border: 2px solid red;
+}
+body #fourth {
+  height: 200px;
+  border: 2px solid blue;
+}
+@media (max-width: 640px) {
+  body #fourth {
+    order: -1;
+  }
+}

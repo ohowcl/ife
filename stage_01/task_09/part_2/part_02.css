@@ -5,11 +5,7 @@
   background: #36648B;
   padding-right: 0px;
   font-family: SimHei;
-<<<<<<< HEAD
   color: #eaeaea;
-=======
-  color: white;
->>>>>>> 729f78d6c64ac325c972866aa04b8f5844f7462b
 }
 #part-02 #p2header{
   width: 100%;
@@ -66,18 +62,10 @@
   margin-bottom: 2px;
   text-align: center;
   font-size: 15px;
-<<<<<<< HEAD
-=======
-  color: #eaeaea;
->>>>>>> 729f78d6c64ac325c972866aa04b8f5844f7462b
 }
 #part-02 #p2content{
   width:100%;
   height: calc(100% - 200px);
-<<<<<<< HEAD
-=======
-  /*outline: 1px solid black;*/
->>>>>>> 729f78d6c64ac325c972866aa04b8f5844f7462b
   float: right;
   position: relative;
 }
@@ -86,7 +74,6 @@
   width: calc(100% - 30px);
   height: 250px;
   position: relative;
-<<<<<<< HEAD
   background: rgba(234,234,234,0.2);
   overflow: hidden;
 }
@@ -94,16 +81,6 @@
   /*color: white;*/
   height: calc(16.66% - 5px);
   margin-bottom: 5px;
-=======
-  /*outline: 1px solid black;*/
-  overflow: hidden;
-}
-#part-02 #p2content #p2content-table #p2content-t{
-  color: white;
-  height: calc(16.66% - 5px);
-  margin-bottom: 5px;
-  /*outline: 1px solid black;*/
->>>>>>> 729f78d6c64ac325c972866aa04b8f5844f7462b
 }
 #part-02 #p2content #p2content-table #p2content-t img,
 #part-02 #p2content #p2content-table #p2content-t1 img,
@@ -127,17 +104,12 @@
 {
   height: calc(16.66% - 5px);
   margin-bottom: 5px;
-<<<<<<< HEAD
-=======
-  /*outline: 1px solid black;*/
->>>>>>> 729f78d6c64ac325c972866aa04b8f5844f7462b
   padding-left: 20px;
 }
 #part-02 #p2content #p2content-table #p2content-t1 #p2content-t1-1,
 #part-02 #p2content #p2content-table #p2content-t2 #p2content-t2-1,
 #part-02 #p2content #p2content-table #p2content-t3 #p2content-t3-1
 {
-<<<<<<< HEAD
   width: 8px;
   height: 8px;
   border: solid white;
@@ -153,19 +125,6 @@
 #part-02 #p2content #p2content-table #p2content-t2{
   height: calc(50% - 5px);
   margin-bottom: 5px;
-=======
-  width:0;
-  height:0;
-  border-top:8px solid transparent;
-  border-bottom: 8px solid transparent;
-  border-left: 16px solid #eaeaea;
-  float: left;
-}
-#part-02 #p2content #p2content-table #p2content-t2{
-  height: calc(50% - 5px);
-  margin-bottom: 5px;
-  /*outline: 1px solid black;*/
->>>>>>> 729f78d6c64ac325c972866aa04b8f5844f7462b
   padding-left: 20px;
 }
 #part-02 #p2content #p2content-table #p2content-t2 #p2content-t21-t23,
@@ -173,13 +132,10 @@
 #part-02 #p2content #p2content-table #p2content-t2 #p2content-t2-5{
   height: 33.33%;
 }
-<<<<<<< HEAD
 #part-02 #p2content #p2content-table #p2content-t2 #p2content-t2-4,
 #part-02 #p2content #p2content-table #p2content-t2 #p2content-t2-5{
   margin-left: 30px;
 }
-=======
->>>>>>> 729f78d6c64ac325c972866aa04b8f5844f7462b
 #part-02 #p2content #p2content-save,
 #part-02 #p2content #p2content-share,
 #part-02 #p2content #p2content-pics,

@@ -1,0 +1,251 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+body #part-01 {
+  margin: 20px;
+  padding: 10px;
+  width: 300px;
+  height: 300px;
+}
+body #part-01 table {
+  border-collapse: collapse;
+}
+body #part-01 table thead tr {
+  background-color: black;
+}
+body #part-01 table thead td {
+  border: 1px solid white;
+  color: white;
+}
+body #part-01 table tbody tr:nth-child(odd) {
+  background-color: #ccc;
+}
+body #part-01 table tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+body #part-01 table tbody tr:nth-child(-n+3) {
+  color: red;
+}
+body #part-02 {
+  margin: 20px;
+  padding: 10px;
+  width: 300px;
+  height: 100px;
+  text-align: center;
+}
+@keyframes smallToBig {
+  to {
+    width: 200px;
+  }
+}
+body #part-02 input {
+  width: 100px;
+}
+body #part-02 input:focus {
+  animation: smallToBig 1s 0s 1 linear both;
+}
+body #part-03 {
+  margin: 20px;
+  padding: 10px;
+  width: 300px;
+  height: 300px;
+}
+body #part-03 #container {
+  width: 200px;
+  height: 200px;
+  margin: 50px;
+  background-color: gray;
+  position: relative;
+  overflow: hidden;
+}
+body #part-03 #container #control {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 60px;
+  height: 20px;
+  z-index: 200;
+}
+body #part-03 #container #control a {
+  float: left;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+body #part-03 #container #control a #item1 {
+  background-color: red;
+  z-index: 200;
+  text-align: center;
+}
+body #part-03 #container #control a #item2 {
+  background-color: red;
+  z-index: 200;
+  text-align: center;
+  background-color: blue;
+}
+body #part-03 #container #control a #item3 {
+  background-color: red;
+  z-index: 200;
+  text-align: center;
+  background-color: green;
+}
+@keyframes stage1 {
+  0% {
+    left: 0px;
+  }
+  20.83% {
+    left: 0px;
+  }
+  33.33% {
+    left: -200px;
+  }
+  54.17% {
+    left: -200px;
+  }
+  66.67% {
+    left: -400px;
+  }
+  87.5% {
+    left: -400px;
+  }
+  100% {
+    left: -600px;
+  }
+}
+@keyframes stage2 {
+  0% {
+    left: -200px;
+  }
+  20.83% {
+    left: -200px;
+  }
+  33.33% {
+    left: -400px;
+  }
+  54.17% {
+    left: -400px;
+  }
+  66.67% {
+    left: -600px;
+  }
+  66.67001% {
+    left: 0px;
+  }
+  87.5% {
+    left: 0px;
+  }
+  100% {
+    left: -200px;
+  }
+}
+@keyframes stage3 {
+  0% {
+    left: -400px;
+  }
+  20.83% {
+    left: -400px;
+  }
+  33.33% {
+    left: -600px;
+  }
+  33.33001% {
+    left: 0px;
+  }
+  54.17% {
+    left: 0px;
+  }
+  66.67% {
+    left: -200px;
+  }
+  87.5% {
+    left: -200px;
+  }
+  100% {
+    left: -400px;
+  }
+}
+@keyframes stage4 {
+  0% {
+    left: 0px;
+  }
+  20.83% {
+    left: 0px;
+  }
+  33.33% {
+    left: -200px;
+  }
+  54.17% {
+    left: -200px;
+  }
+  66.67% {
+    left: -400px;
+  }
+  87.5% {
+    left: -400px;
+  }
+  100% {
+    left: -600px;
+  }
+}
+body #part-03 #container #stage1:target {
+  animation: stage1 24s 0s infinite ease-in-out normal;
+  z-index: 99;
+  display: block;
+}
+body #part-03 #container #stage2:target {
+  animation: stage2 24s 0s infinite ease-in-out normal;
+  z-index: 99;
+  display: block;
+}
+body #part-03 #container #stage3:target {
+  animation: stage3 24s 0s infinite ease-in-out normal;
+  z-index: 99;
+  display: block;
+}
+body #part-03 #container #stage4 {
+  display: block;
+  z-index: 0;
+}
+body #part-03 #container .banner {
+  width: 800px;
+  height: 200px;
+  animation: stage4 24s 0s infinite ease-in-out normal;
+  position: absolute;
+  display: none;
+  z-index: 0;
+}
+body #part-03 #container .banner .banner1 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+body #part-03 #container .banner .banner2 {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  position: absolute;
+  top: 0px;
+  left: 200px;
+}
+body #part-03 #container .banner .banner3 {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  position: absolute;
+  top: 0px;
+  left: 400px;
+}
+body #part-03 #container .banner .banner4 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  position: absolute;
+  top: 0px;
+  left: 600px;
+}

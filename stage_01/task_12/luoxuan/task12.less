@@ -1,0 +1,192 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    #part-01 {
+        margin: 20px;
+        padding: 10px;
+        width: 300px;
+        height: 300px;
+        table {
+            border-collapse: collapse;
+            thead {
+               tr {
+                   background-color: black;
+               } 
+               td {
+                   border: 1px solid white;
+                   color: white;
+               }
+            }
+            tbody {
+                tr:nth-child(odd) {
+                    background-color: #ccc;
+                }
+                tr:nth-child(even) {
+                    background-color: #fff;
+                }
+                tr:nth-child(-n+3) {
+                    color: red;
+                }
+            }
+        }
+    }
+    #part-02 {
+        margin: 20px;
+        padding: 10px;
+        width: 300px;
+        height: 100px;
+        text-align: center;
+        @keyframes smallToBig{
+            to {
+                width: 200px;
+            }
+        }
+        input {
+            width: 100px;
+            &:focus {
+                animation: smallToBig 1s 0s 1 linear both;
+            }
+        }
+    }
+    #part-03 {
+        margin: 20px;
+        padding: 10px;
+        width: 300px;
+        height: 300px;
+        
+        #container {
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+            background-color: gray;
+            position: relative;
+            overflow: hidden;
+            #control {
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+                width: 60px;
+                height: 20px;
+                z-index: 200;
+                a {
+                    float: left;
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    text-decoration: none;
+                    color: white;
+                    #item1 {
+                        background-color: red;
+                        z-index: 200;
+                        text-align: center;
+                    }
+                    #item2 {
+                        #item1;
+                        background-color: blue;
+                    }
+                    #item3 {
+                        #item1;
+                        background-color: green;
+                    }
+                }
+            }
+            @keyframes stage1{
+                0% { left: 0px; }
+                20.83% { left: 0px; }
+                33.33% { left: -200px; }
+                54.17% { left: -200px; }
+                66.67% { left: -400px; }
+                87.5% { left: -400px; }
+                100% { left: -600px; }
+            }
+            @keyframes stage2{
+                0% { left: -200px; }
+                20.83% { left: -200px; }
+                33.33% { left: -400px; }
+                54.17% { left: -400px; }
+                66.67% { left: -600px; }
+                66.67001% { left: 0px; }
+                87.5% { left: 0px; }
+                100% { left: -200px; }
+            }
+            @keyframes stage3{
+                0% { left: -400px; }
+                20.83% { left: -400px; }
+                33.33% { left: -600px; }
+                33.33001% { left: -0px; }
+                54.17% { left: -0px; }
+                66.67% { left: -200px; }
+                87.5% { left: -200px; }
+                100% { left: -400px; }
+            }
+            @keyframes stage4{
+                0% { left: 0px; }
+                20.83% { left: 0px; }
+                33.33% { left: -200px; }
+                54.17% { left: -200px; }
+                66.67% { left: -400px; }
+                87.5% { left: -400px; }
+                100% { left: -600px; }
+            }
+            #stage1:target {
+                animation: stage1 24s 0s infinite ease-in-out normal;
+                z-index: 99;
+                display: block;
+            }
+            #stage2:target {
+                animation: stage2 24s 0s infinite ease-in-out normal;
+                z-index: 99;
+                display: block;
+            }
+            #stage3:target {
+                animation: stage3 24s 0s infinite ease-in-out normal;
+                z-index: 99;
+                display: block;
+            }
+            #stage4 {
+                display: block;
+                z-index: 0;
+            }
+            .banner {
+                width: 800px;
+                height: 200px;
+                animation: stage4 24s 0s infinite ease-in-out normal;
+                position: absolute;
+                display: none;
+                z-index: 0;
+                .banner1 {
+                    width: 200px;
+                    height: 200px;
+                    background-color: red;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                }
+                .banner2 {
+                    width: 200px;
+                    height: 200px;
+                    background-color: blue;
+                    position: absolute;
+                    top: 0px;
+                    left: 200px;
+                }
+                .banner3 {
+                    width: 200px;
+                    height: 200px;
+                    background-color: green;
+                    position: absolute;
+                    top: 0px;
+                    left: 400px;
+                }
+                .banner4 {
+                    width: 200px;
+                    height: 200px;
+                    background-color: red;
+                    position: absolute;
+                    top: 0px;
+                    left: 600px;
+                }
+            }
+        }
+    }
+}

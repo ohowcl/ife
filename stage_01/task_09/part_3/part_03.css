@@ -1,10 +1,10 @@
-#part-01 {
+#part-03 {
   width: 960px;
   color: #ccc;
 }
-#part-01 span {
+#part-03 span {
   font-size: small;
 }
-#part-01 .p1active {
+#part-03 .p3active {
   color: #80A2C5;
 }

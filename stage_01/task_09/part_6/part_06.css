@@ -1,4 +1,4 @@
-#part-02{
+#part-06{
   width: 960px;
   height: 140px;
   outline:1px solid #ededed;
@@ -6,7 +6,7 @@
   font-family: SimHei;
   padding-top: 20px;
 }
-#part-02 #p2header{
+#part-06 #p6header{
   width: 90%;
   height: 20px;
   outline: 1px solid #ededed;
@@ -14,19 +14,19 @@
   margin: auto;
   position: relative;
 }
-#part-02 #p2header span{
+#part-06 #p6header span{
   font-size: 15px;
   position: absolute;
   bottom: 2px;
 }
-#part-02 #p2content{
+#part-06 #p6content{
   width: 90%;
   height: 100px;
   outline: 1px solid #ededed;
   margin-bottom: 15px;
   margin: auto;
 }
-#part-02 #p2content .p2content-a{
+#part-06 #p6content .p6content-a{
   width: calc(25% - 24px);
   height:calc(90% - 2px);
   float: left;
@@ -37,34 +37,34 @@
   position: relative;
   background: white;
 }
-#part-02 #p2content #p2content-1{
+#part-06 #p6content #p6content-1{
   border-left: 3px solid #5F9EA0;
 }
-#part-02 #p2content #p2content-2{
+#part-06 #p6content #p6content-2{
   border-left: 3px solid #009ACD;
 }
-#part-02 #p2content #p2content-3{
+#part-06 #p6content #p6content-3{
   border-left: 3px solid #CD5555;
 }
-#part-02 #p2content #p2content-4{
+#part-06 #p6content #p6content-4{
   border-left: 3px solid #EEDC82;
 }
-#part-02 #p2content .p2content-num{
+#part-06 #p6content .p6content-num{
   width: 20%;
   margin-left: 10px;
   float: left;
   position: absolute;
   bottom: 10px;
 }
-#part-02 #p2content .p2content-num .p2-p1{
+#part-06 #p6content .p6content-num .p6-p1{
   font-size: 15px;
 }
-#part-02 #p2content .p2content-num .p2-p2{
+#part-06 #p6content .p6content-num .p6-p2{
   font-size: 11px;
   color: grey;
   opacity: 0.7;
 }
-#part-02 #p2content .p2content-pic{
+#part-06 #p6content .p6content-pic{
   width: 40%;
   margin-top: 20px;
   margin-right: 10px;
@@ -72,15 +72,15 @@
   height: 60%;
   /*outline: 1px solid black;*/
 }
-#part-02 #p2content #p2content-1 #p2content-1-2{
+#part-06 #p6content #p6content-1 #p6content-1-2{
   background-color: #5F9EA0;
 }
-#part-02 #p2content #p2content-2 #p2content-2-2{
+#part-06 #p6content #p6content-2 #p6content-2-2{
   background-color: #009ACD;
 }
-#part-02 #p2content #p2content-3 #p2content-3-2{
+#part-06 #p6content #p6content-3 #p6content-3-2{
   background-color: #CD5555;
 }
-#part-02 #p2content #p2content-4 #p2content-4-2{
+#part-06 #p6content #p6content-4 #p6content-4-2{
   background-color: #EEDC82;
 }

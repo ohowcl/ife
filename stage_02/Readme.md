@@ -13,7 +13,7 @@
 4. task_26 task_27 task_28截止到4月14号，每个人自己做。
 5. task_29 task_30 task_31截止到4月17号，每个人自己做。
 6. task_32 task_33 task_34 task_35 task_36截止到21号，每个人自己做。
-
+7. 每个人都需要review他人的代码，如果不清晰处编写者需要修改，或者提供注释。
 
 ### 代码要求：
 1. 代码命名、编写规范：[airbnb](https://github.com/airbnb/javascript).

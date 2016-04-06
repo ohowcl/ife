@@ -3,6 +3,7 @@
     display: flex;
     height: 400px; /* Or whatever */
     width: auto;
+    margin: 3px;
     justify-content: flex-start;
     align-items: flex-end;
 }

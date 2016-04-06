@@ -69,7 +69,7 @@ function btnHandle() {
 
 
 function init() {
-
+  
   // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
   document.getElementById('sort-btn').onclick = btnHandle;
 }

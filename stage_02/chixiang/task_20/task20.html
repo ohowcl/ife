@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>task20</title>
+    <style media="screen">
+    </style>
+  </head>
+  <body>
+    <textarea id="text" rows="8" cols="40"></textarea>
+    <form id="match" action="task20.html" method="post">
+      <input id="word" type="text">
+      <input id="submit" type="button" value="查询">
+    </form>
+    <div id='result'></div>
+  </body>
+  <script type="text/javascript">
+    function matchwords() {
+      var text = document.getElementById("text").value;
+      var word = document.getElementById("word").value;
+      document.getElementById("result").innerHTML = text.replace(new RegExp(word,"g"), "<font color=red><strong>" + word + "</strong></font>");
+    }
+    function init() {
+      document.getElementById("submit").onclick = matchwords;
+    }
+    init();
+  </script>
+</html>

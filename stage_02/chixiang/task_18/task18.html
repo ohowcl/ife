@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>task18</title>
+    <style media="screen">
+    </style>
+  </head>
+  <body>
+    <form id="queue" action="task18.html" method="post">
+      <input id="inputnum" type="text">
+      <input id="lfti" type="button" name="name" value="左侧入">
+      <input id="lfto" type="button" name="name" value="左侧出">
+      <input id="rgti" type="button" name="name" value="右侧入">
+      <input id="rgto" type="button" name="name" value="右侧出">
+    </form>
+    <div class="display">
+      <ul id="showqueue">
+
+      </ul>
+    </div>
+  </body>
+  <script type="text/javascript">
+    var array = [], delelement;
+    var input = document.getElementById("inputnum");
+    function leftin() {
+      var value = input.value;
+      array.unshift(value);
+      console.log(array)
+      render()
+    }
+    function leftout() {
+      if (array.length != 0) {
+        delelement = array.shift();
+        alert("左侧删除的元素是：" + delelement);
+      }
+      console.log(array)
+      render()
+    }
+    function rightin() {
+      var value = input.value;
+      array.push(value);
+      console.log(array)
+      render()
+    }
+    function rightout() {
+      if (array.length != 0) {
+        delelement = array.pop();
+        alert("右侧删除的元素是：" + delelement);
+      }
+      console.log(array)
+      render()
+    }
+    function del(id){
+      for (var i = 0; i < array.length; i++) {
+        if (i == id) {
+          array.splice(id,1);
+        }
+      }
+      render();
+    }
+    function render() {
+      document.getElementById("showqueue").innerHTML = "";
+      for (var i = 0; i < array.length; i++) {
+        document.getElementById("showqueue").innerHTML += '<li id=\"' + i + '\" onclick = \"del(this.id)\">' + array[i] + '</li>';
+        document.getElementById(i).style.backgroundColor = "Red";
+        document.getElementById(i).style.color = "White";
+        document.getElementById(i).style.display = "inline-block";
+        document.getElementById(i).style.margin = "5px";
+        document.getElementById(i).style.padding = "5px";
+      }
+    }
+    function init() {
+      document.getElementById("lfti").onclick = leftin;
+      document.getElementById("lfto").onclick = leftout;
+      document.getElementById("rgti").onclick = rightin;
+      document.getElementById("rgto").onclick = rightout;
+      //document.getElementsByTagName("li").onclick = del;
+    }
+    init();
+  </script>
+</html>

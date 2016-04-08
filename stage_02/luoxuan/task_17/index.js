@@ -55,7 +55,21 @@ var pageState = {
  * 渲染图表
  */
 function renderChart() {
-
+  const max = chartData[pageState.nowSelectCity][pageState.nowGraTime + "Max"];
+  const data = chartData[pageState.nowSelectCity][pageState.nowGraTime];
+  const chart = document.getElementById("aqi-chart-wrap");
+  chart.innerHTML = "";
+  for (var item in data) {
+      let element = document.createElement("div");
+      let height = 400 * data[item] / max;
+      element.style.height = height + "px";
+      let colorIndex = Math.floor(400 * data[item] / (max * 20));
+      let className = pageState.nowGraTime + "-item ";
+      className += "color" + colorIndex;
+      element.className = className;
+      element.title = item + ": " + data[item];
+      chart.appendChild(element);
+  }
 }
 
 /**
@@ -63,10 +77,16 @@ function renderChart() {
  */
 function graTimeChange() {
   // 确定是否选项发生了变化 
-
+  if (this.value == pageState.nowGraTime) {
+      return;
+  }
   // 设置对应数据
-
+  pageState.nowGraTime = this.value;
+  if (pageState.nowSelectCity == -1) {
+      pageState.nowSelectCity = 0;
+  }
   // 调用图表渲染函数
+  renderChart();
 }
 
 /**
@@ -74,17 +94,23 @@ function graTimeChange() {
  */
 function citySelectChange() {
   // 确定是否选项发生了变化 
-
+  if (this.selectedIndex == pageState.nowSelectCity) {
+      return;
+  } 
   // 设置对应数据
-
+  pageState.nowSelectCity = this.selectedIndex;
   // 调用图表渲染函数
+  renderChart();
 }
 
 /**
  * 初始化日、周、月的radio事件，当点击时，调用函数graTimeChange
  */
 function initGraTimeForm() {
-
+    let radios = document.getElementsByName("gra-time");
+    for (var i = 0; i < radios.length; i++) {
+        radios[i].onchange = graTimeChange;
+    }
 }
 
 /**
@@ -94,7 +120,85 @@ function initCitySelector() {
   // 读取aqiSourceData中的城市，然后设置id为city-select的下拉列表中的选项
 
   // 给select设置事件，当选项发生变化时调用函数citySelectChange
+  let select = document.getElementById("city-select");
+  select.innerHTML = "";
+  for (var city in aqiSourceData) {
+      let option = document.createElement("option");
+      option.textContent = city;
+      select.appendChild(option);
+  }
+  select.onchange = citySelectChange;
+}
 
+/**
+ * Procedure day for aqi chart
+ */
+function getAqiGraDay(aqiData, data) {
+    data["day"] = {};
+    let max = 0;
+    for (var day in aqiData) {
+        data["day"][day] = aqiData[day];
+        max = aqiData[day] > max? aqiData[day] : max;
+    }
+    data["dayMax"] = max;
+}
+
+/**
+ * Process week for aqi chart
+ */
+function getAqiGraWeek(aqiData, data) {
+    data["week"] = {};
+    let max = 0;
+    let count = 0;
+    let sum = 0;
+    let number = 1;
+    for (var day in aqiData) {
+        let date = new Date(day);
+        if (date.getDay() == 6) {
+            count++;
+            sum += aqiData[day];
+            data["week"]["第" + number + "周"] = (sum / count).toFixed(1);
+            max = sum / count > max? sum / count : max;
+            count = 0;
+            sum = 0;
+            number++;
+        } else {
+            count++;
+            sum += aqiData[day];
+        }
+    }
+    if (count != 0) {
+        sum += aqiData[day];
+        data["第" + number + "周"] = (sum / count).toFixed(1);
+        max = sum / count > max? sum / count : max;
+    }
+    data["weekMax"] = max;
+}
+
+/**
+ * Process aqi month data
+ */
+function getAqiGraMonth(aqiData, data) {
+    data["month"] = {};
+    let dataCount = {};
+    let sum = 0;
+    max = 0;
+    for (var day in aqiData) {
+        const date = new Date(day);
+        const key = date.getFullYear() + " " + date.getMonth() + "月";
+        if (data["month"].hasOwnProperty(key)) {
+            data["month"][key] = data["month"][key] * dataCount[key] + aqiData[day];
+            dataCount[key]++;
+            data["month"][key] = (data["month"][key] / dataCount[key]).toFixed(2);
+        } else {
+            data["month"][key] = aqiData[day];
+            dataCount[key] = 1;
+        }
+    }
+    for (var month in data["month"]) {
+        max = data["month"][month] > max? data["month"][month] : max;
+    }
+    data["monthMax"] = max;
 }
 
 /**
@@ -103,16 +207,14 @@ function initCitySelector() {
 function initAqiChartData() {
   // 将原始的源数据处理成图表需要的数据格式
   // 处理好的数据存到 chartData 中
-  const city = document.getElementById("city-select").value;
-  const radio = document.getElementsByName("gra-time");
-  let graTime = "";
-  let accumulation = 1;
-  for (var i = 0; i < radio.length; i++) {
-      if (radio[i].checked) {
-          graTime = radio[i].value;
-      }
+  let idx = 0;
+  for (var city in aqiSourceData) {
+      chartData[idx] = {};
+      getAqiGraDay(aqiSourceData[city], chartData[idx]);
+      getAqiGraWeek(aqiSourceData[city], chartData[idx]);
+      getAqiGraMonth(aqiSourceData[city], chartData[idx]);
+      idx++;
   }
-  if (radio
 }
 
 /**

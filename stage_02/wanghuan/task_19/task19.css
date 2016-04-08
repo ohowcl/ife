@@ -1,0 +1,25 @@
+.delbutton,
+.addbutton,
+#sortbutton,
+#randombutton{
+  width: 60px;
+  height: 20px;
+}
+#addbutton2,
+#delbutton2{
+  margin-right: 20px;
+}
+#divShow{
+  width: 90%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+.div{
+  border: 0px;
+  background-color: red;
+  margin: 15px;
+  color: white;
+  position: absolute;
+  bottom: 0px;
+}

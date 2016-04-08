@@ -4,7 +4,7 @@ var btn3 = document.getElementById('delbutton1');
 var btn4 = document.getElementById('delbutton2');
 var btn5 = document.getElementById('selbutton');
 var array = [];
-var pattern1 = /[0-9]{1,}/;
+var pattern = /\s+/;
 
 function changeDiv() {
   var len = document.getElementById('divShow').children.length;
@@ -20,19 +20,21 @@ function changeDiv() {
 }
 
 function addLeft() {
-  var textValue1 = document.getElementById('textvalue').value.trim();
-  var textValue = "";
-  for(var i = 0;i < textValue1.length;i++) {
-    textValue+=textValue1.charAt(textValue1.length-i-1);
+  var textValue = document.getElementById('textvalue').value.trim();
+
+  if((pattern.test(document.getElementById('textvalue').value)) == "") {
+      alert("input can not be null");
+      return;
   }
   //clear the input value
   document.getElementById('textvalue').value = "";
   var array1 = textValue.split(",");
+  var k = 0;
 
   for(var i = 0;i < array1.length;i++) {
     var array2 = array1[i].split(/\s+/);
     for(var j = 0;j < array2.length;j++) {
-      array.unshift(array2[j]);
+      array.splice(k++,0,array2[j]);
     }
   }
 
@@ -41,7 +43,10 @@ function addLeft() {
 
 function addRight() {
   var textValue = document.getElementById('textvalue').value.trim();
-
+  if((pattern.test(document.getElementById('textvalue').value)) == "") {
+      alert("input can not be null");
+      return;
+  }
   //clear the input value
   document.getElementById('textvalue').value = "";
   var array1 = textValue.split(",");

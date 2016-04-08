@@ -1,16 +1,20 @@
 var btn1 = document.getElementById('addbutton1');
-var btn2 = document.getElementById('addbutton2');
-var btn3 = document.getElementById('delbutton1');
-var btn4 = document.getElementById('delbutton2');
-var btn5 = document.getElementById('selbutton');
+var div1 = document.getElementById('divShow');
 var array = [];
-var pattern1 = /[0-9]{1,}/;
+var arrayTag = [];
+var pattern = /\s+/;
 
-function changeDiv() {
-  var len = document.getElementById('divShow').children.length;
+function changeDiv(divshow) {
+  //删除之前在页面上显示的div
+  var len = divshow.children.length;
   for(var j = 0;j < len;j++) {
-    document.getElementById('divShow').removeChild(document.getElementById('divShow').children[0]);
+    divshow.removeChild(divshow.children[0]);
   }
+  var len2 = array.length;
+  if(array.length > 10){
+    array = array.slice(len2-10);
+  }
+  //添加数组对应的所有div于页面上
   for(var i = 0;i < array.length;i++) {
     var divEvery = document.createElement("div");
     divEvery.innerHTML = array[i];
@@ -19,55 +23,87 @@ function changeDiv() {
   }
 }
 
-function addLeft() {
-  var textValue1 = document.getElementById('textvalue').value.trim();
-  var textValue = "";
-  for(var i = 0;i < textValue1.length;i++) {
-    textValue+=textValue1.charAt(textValue1.length-i-1);
+function changeDiv2(divshow) {
+  //删除之前在页面上显示的div
+  var len = divshow.children.length;
+  for(var j = 0;j < len;j++) {
+    divshow.removeChild(divshow.children[0]);
+  }
+  var len2 = arrayTag.length;
+  if(arrayTag.length > 10){
+    arrayTag = arrayTag.slice(len2-10);
+  }
+  //添加数组对应的所有div于页面上
+  for(var i = 0;i < arrayTag.length;i++) {
+    var divEvery = document.createElement("div");
+    divEvery.innerHTML = arrayTag[i];
+    divEvery.setAttribute("class","div");
+    document.getElementById('divShow1').appendChild(divEvery);
+  }
+}
+
+function updateTag(e) {
+  var str = this.value;
+  var flag = true,
+      k = 0;
+  if(/(,| |\，)$/.test(str)||e.keyCode===13) {
+    var newTag = str.match(/(^[^,\， ]*)/)[0];
+    if(arrayTag.length === 0) {
+      arrayTag.push(newTag);
+    }else {
+      for(var k = 0;k < arrayTag.length;k++) {
+        //验证是否有重复值
+        if(arrayTag[k] === newTag) {
+          alert(arrayTag[k] + "exists");
+          flag = false;
+          break;
+        }
+        else {
+          flag = true;
+        }
+      }
+      if(flag === true) {
+        arrayTag.splice(k++,0,newTag);
+      }
+    }
+  }
+  changeDiv2(document.getElementById('divShow1'));
+}
+
+function addLeft(text) {
+  var textValue = text.value.trim();
+  if((text.value) == "") {
+      alert("input can not be null");
+      return;
   }
   //clear the input value
-  document.getElementById('textvalue').value = "";
+  text.value = "";
   var array1 = textValue.split(",");
-
+  var k = 0;
+  var flag = true;
+  //,分隔划分
   for(var i = 0;i < array1.length;i++) {
+    //空格换行等字符串划分
     var array2 = array1[i].split(/\s+/);
     for(var j = 0;j < array2.length;j++) {
-      array.unshift(array2[j]);
+      for(var k = 0;k < array.length;k++) {
+        //验证是否有重复值
+        if(array[k] === array2[j]) {
+          alert(array[k] + "exists");
+          flag = false;
+          break;
+        }
+        else {
+          flag = true;
+        }
+      }
+      if(flag === true) {
+        array.splice(k++,0,array2[j]);
+      }
     }
   }
 
-  changeDiv();
-}
-
-function addRight() {
-  var textValue = document.getElementById('textvalue').value.trim();
-
-  //clear the input value
-  document.getElementById('textvalue').value = "";
-  var array1 = textValue.split(",");
-
-  for(var i = 0;i < array1.length;i++) {
-    var array2 = array1[i].split(/\s+/);
-    for(var j = 0;j < array2.length;j++) {
-      array.push(array2[j]);
-    }
-  }
-
-  changeDiv();
-
-}
-
-function delLeft() {
-
-    var delEle = array.shift();
-    alert("delete num :"+delEle);
-    changeDiv();
-}
-
-function delRight() {
-  var delEle = array.pop();
-  alert("delete num :"+delEle);
-  changeDiv();
+  changeDiv(document.getElementById('divShow'));
 }
 
 function delDivHandle(target) {
@@ -80,29 +116,33 @@ function delDivHandle(target) {
  changeDiv();
 }
 
-function selVal() {
-  var v = document.getElementById('selectValue').value.trim();
-  document.getElementById('selectValue').value = "";
-  changeDiv();
-  for(var i = 0;i < document.getElementById('divShow').children.length;i++) {
-    if(v === document.getElementById('divShow').children[i].innerHTML) {
-      document.getElementById('divShow').children[i].style.color = "white";
-    }
-  }
+
+function delDivHandle(target) {
+ var content = target.innerHTML;
+ for(var i = 0;i < array.length;i++) {
+   if(content === array[i]) {
+     array.splice(i,1);
+   }
+ }
+ changeDiv();
 }
 
 function init() {
-  btn1.onclick = addLeft;
-  btn2.onclick = addRight;
-  btn3.onclick = delLeft;
-  btn4.onclick = delRight;
-  btn5.onclick = selVal;
+  // add interests btn event
+  btn1.addEventListener("click",function(event) {
 
-  var div1 = document.getElementById('divShow');
+    if(event.target && event.target.previousSibling.nodeName === "#text") {
+      addLeft(document.getElementById('textvalue'));
+    }
+  })
+
   div1.addEventListener("click", function(event) {
 		if (event.target && event.target.nodeName === "DIV") {
  			delDivHandle(event.target);
  		}
  	})
+
+  var tagT = document.getElementById('tagText');
+  tagT.onkeyup = updateTag;
 }
 init();

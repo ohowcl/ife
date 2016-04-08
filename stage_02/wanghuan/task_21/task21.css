@@ -1,13 +1,10 @@
-.delbutton,
-.addbutton,
-#selectbutton {
-  width: 60px;
+.addbutton{
+  width: 100px;
   height: 20px;
 }
-#addbutton2{
-  margin-right: 20px;
-}
-#divShow{
+
+#divShow,
+#divShow1{
   width: 90%;
   /*border: 1px solid black;*/
   overflow: hidden;

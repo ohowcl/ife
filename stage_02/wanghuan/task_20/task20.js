@@ -22,7 +22,7 @@ function changeDiv() {
 function addLeft() {
   var textValue = document.getElementById('textvalue').value.trim();
 
-  if((pattern.test(document.getElementById('textvalue').value)) == "") {
+  if(document.getElementById('textvalue').value == "") {
       alert("input can not be null");
       return;
   }
@@ -43,7 +43,7 @@ function addLeft() {
 
 function addRight() {
   var textValue = document.getElementById('textvalue').value.trim();
-  if((pattern.test(document.getElementById('textvalue').value)) == "") {
+  if(document.getElementById('textvalue').value == "") {
       alert("input can not be null");
       return;
   }

@@ -1,0 +1,37 @@
+*{
+  margin: 5px;
+}
+.root {
+  display: flex;
+  border: 1px solid black;
+  margin: 5px;
+  padding: 10px;
+  width: 600px;
+  height: auto;
+  flex-direction: column;
+  /*background: #36648B;*/
+}
+
+.child1 {
+  display: flex;
+  margin: 5px 20px 5px 20px;
+  flex-grow: 1;
+  flex-direction: column;
+  display: block;
+}
+.child2 {
+  display: flex;
+  margin: 5px 20px 5px 20px;
+  flex-grow: 1;
+  flex-direction: column;
+  display: block;
+}
+.child3 {
+  margin: 5px 20px 5px 20px;
+  flex-grow: 1;
+  display: block;
+}
+#targetNode{
+  border:1px solid #006FCC;
+  box-shadow: 0 0 3px #006FCC;
+}

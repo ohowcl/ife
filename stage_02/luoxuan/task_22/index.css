@@ -1,0 +1,20 @@
+body {
+    overflow: auto;
+}
+#tree {
+    overflow: auto;
+}
+.node {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid green;
+    background-color: white;
+}
+.fake-node {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}

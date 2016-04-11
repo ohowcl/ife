@@ -5,7 +5,10 @@ function defButton() {
 			preButton = document.getElementById('before'),
 			postButton = document.getElementById('behind'),
 			preSearchButton = document.getElementById('befSearch'),
-			postSearchButton = document.getElementById('behSearch');
+			postSearchButton = document.getElementById('behSearch'),
+			delButton = document.getElementById('delete'),
+			addButton = document.getElementById('add');
+			// img[0] = 'url("1.png") 0 3px rgb(139, 202, 255) no-repeat';
 
 	preButton.addEventListener("click",function(){
 		tree.preOrder(root);
@@ -23,7 +26,7 @@ function defButton() {
 				len = tree.nodes.length,
 				flag = 1;
 		for(var i = 0;i < len;i++) {
-			if(preValue == parseInt(tree.nodes[i].innerHTML)) {
+			if(preValue == tree.nodes[i].firstChild.innerHTML) {
 				tree.nodes.splice(i+1,len-i-1);
 				flag = 0;
 				break;
@@ -43,7 +46,7 @@ function defButton() {
 				len = tree.nodes.length,
 				flag = 1;
 		for(var i = 0;i < len;i++) {
-			if(postValue == parseInt(tree.nodes[i].innerHTML)) {
+			if(postValue == tree.nodes[i].firstChild.innerHTML) {
 				tree.nodes.splice(i+1,len-i-1);
 				flag = 0;
 				break;
@@ -57,34 +60,59 @@ function defButton() {
 		}
 	});
 
+	delButton.addEventListener("click",function(){
+		if(!tree.move) {
+			tree.deleteNode();
+		}
+	});
+
+	addButton.addEventListener("click",function(){
+		if(!tree.move) {
+			tree.addNode();
+		}
+	});
+
+	root.addEventListener("click",function(event) {
+		tree.targetNode = event.target;
+		if(event.target.nodeName == "SPAN") {
+			tree.targetNode = tree.targetNode.parentNode;
+		}
+		tree.targetNode.id = "targetNode";
+		for(var i = 0,len = tree.targetNode.children.length;i < len;i++) {
+				if(tree.targetNode.children[i].nodeName == "DIV") {
+						tree.targetNode.children[i].style.display = tree.targetNode.children[i].style.display == 'none' ? 'block' : 'none' ;
+				}
+		}
+	});
+
 };
 
 function Tree() {
 	this.nodes = [];
 	this.move = false;
+	this.root1 = document.getElementsByClassName("root")[0];
+	this.targetNode = this.root1;
+	this.fold = false;
 }
 
 Tree.prototype.preOrder = function(node) {
 	this.nodes.push(node);
-	for(var i = 0;i< node.children.length;i++) {
-		this.preOrder(node.children[i]);
+	for(var i = 0,len = node.children.length;i< len;i++) {
+		if(node.children[i].nodeName == "DIV") {
+			this.preOrder(node.children[i]);
+		}
 	}
 };
 
 Tree.prototype.postOrder = function(node) {
-	for(var i = 0;i< node.children.length;i++) {
-		this.postOrder(node.children[i]);
+	for(var i = 0,len = node.children.length;i< len;i++) {
+		if(node.children[i].nodeName == "DIV") {
+			this.postOrder(node.children[i]);
+		}
 	}
 	this.nodes.push(node);
 };
 
-// Tree.prototype.preSearch = function(node,value) {
-//
-// }
-
-Tree.prototype.postSearch = function(node,value) {
-
-}
 
 Tree.prototype.animation = function() {
 	var nodes = this.nodes,
@@ -113,3 +141,24 @@ Tree.prototype.animation = function() {
 	}
 
 };
+
+Tree.prototype.deleteNode = function() {
+	if(this.targetNode && this.targetNode != this.root1) {
+		this.targetNode.parentNode.removeChild(this.targetNode);
+	} else {
+		alert("we can not remove rootNode");
+	}
+}
+
+Tree.prototype.addNode = function() {
+	var addText = document.getElementById('text3').value.trim();
+	if(addText == "") {
+		alert("please input the value");
+	}else if(this.targetNode) {
+		var newNode = document.createElement("div");
+		newNode.innerHTML = addText;
+		newNode.style.border = "1px solid black";
+		this.targetNode.appendChild(newNode);
+		this.targetNode.style.border = "1px solid black";
+	}
+}

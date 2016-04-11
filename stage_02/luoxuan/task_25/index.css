@@ -1,0 +1,43 @@
+body {
+    overflow: auto;
+}
+#tree {
+    overflow: auto;
+}
+.node {
+    overflow: auto;
+    margin: 2px 0px;
+    margin-left: 10px;
+    background-color: white;
+    position: relative;
+}
+pre {
+    border-left: 10px solid #ccc;
+    padding: 10px;
+    color: #317058;
+}
+.content {
+    font-size: 16px;
+    height: 18px;
+}
+.selected-node {
+    background-color: #ccc;
+}
+.icon {
+    display: inline-block;
+    width: 0px; 
+    height: 0px; 
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent; 
+    border-left:8px solid green; 
+    margin-right: 10px;
+}
+.expand-icon{
+    display: inline-block;
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent; 
+    border-top: 8px solid green; 
+    margin-right: 10px;
+}

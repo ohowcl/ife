@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <title>IFE task 24</title>
+    <link href="index.css" rel="stylesheet">
+  </head>
+  <body>
+    <textarea id="content" rows="20" cols="100"></textarea>
+    <button id="generate">生成树</button>
+    <button id="deep-first">深度优先</button>
+    <button id="breadth-first">广度优先</button>
+    <input type="text" id="search-text" />
+    <button id="search">搜索</button>
+    <input type="text" id="new-node" />
+    <button id="add">添加</button>
+    <button id="delete">删除</button>
+    <pre>
+树的形式为：
+{
+    "name": "name",
+    "children": [
+    {
+        "name": "anoter",
+        "children": [...]
+    },
+    {
+        "name": "anoter",
+        "children": [...]
+    },
+    ...
+    ]
+}
+    </pre>
+    <div id="tree">
+    </div>
+  </body>
+  <script type="text/javascript" src="index.js"></script>
+</html>

@@ -18,16 +18,44 @@ function defButton() {
 	});
 
 	preSearchButton.addEventListener("click",function(){
-		tree.preSearch(root,document.getElementById('text1').value);
-
+		tree.preOrder(root);
+		var preValue = document.getElementById('text1').value,
+				len = tree.nodes.length,
+				flag = 1;
+		for(var i = 0;i < len;i++) {
+			if(preValue == parseInt(tree.nodes[i].innerHTML)) {
+				tree.nodes.splice(i+1,len-i-1);
+				flag = 0;
+				break;
+			}
+		}
 		tree.animation();
+		if(flag == 0) {
+			alert("find the content which you input,look the process please");
+		}else {
+			alert("there are not the content which you input,look the process please")
+		}
 	});
 
 	postSearchButton.addEventListener("click",function(){
-		tree.postSearch(root,document.getElementById('text2').value);
+		tree.postOrder(root);
+		var postValue = document.getElementById('text2').value,
+				len = tree.nodes.length,
+				flag = 1;
+		for(var i = 0;i < len;i++) {
+			if(postValue == parseInt(tree.nodes[i].innerHTML)) {
+				tree.nodes.splice(i+1,len-i-1);
+				flag = 0;
+				break;
+			}
+		}
 		tree.animation();
+		if(flag == 0) {
+			alert("find the content which you input,look the process please");
+		}else {
+			alert("there are not the content which you input,look the process please")
+		}
 	});
-
 };
 
 function Tree() {
@@ -36,14 +64,11 @@ function Tree() {
 }
 
 Tree.prototype.preOrder = function(node) {
-
 	this.nodes.push(node);
 	for(var i = 0;i< node.children.length;i++) {
 		this.preOrder(node.children[i]);
 	}
-
 };
-
 
 Tree.prototype.postOrder = function(node) {
 	for(var i = 0;i< node.children.length;i++) {
@@ -52,17 +77,9 @@ Tree.prototype.postOrder = function(node) {
 	this.nodes.push(node);
 };
 
-Tree.prototype.preSearch = function(node,value) {
-	// alert(value);
-	// alert(node.innerText[0]);
-	this.nodes.push(node);
-	if(node.innerText[0] == value) {
-		return;
-	}
-	for(var i = 0;i< node.children.length;i++) {
-		this.preOrder(node.children[i]);
-	}
-}
+// Tree.prototype.preSearch = function(node,value) {
+//
+// }
 
 Tree.prototype.postSearch = function(node,value) {
 

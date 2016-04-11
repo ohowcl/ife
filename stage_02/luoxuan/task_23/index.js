@@ -121,9 +121,10 @@ function scanRender(arr, idx) {
     if (idx >= arr.length) {
         return;
     }
+    const preColor = arr[idx].style["background-color"];
     arr[idx].style["background-color"] = "green";
     window.setTimeout(function() {
-        arr[idx].style["background-color"] = "white";
+        arr[idx].style["background-color"] = preColor;
         scanRender(arr, idx + 1);
     }, 1000);
 }
@@ -150,6 +151,27 @@ function renderTree() {
 }
 
 /**
+ * searchValue() search the node which content equals the given content
+ * 
+ * @param {Array} arr
+ * @param {String} value
+ * @return {Boolean}
+ */
+function searchValue(arr, value) {
+    let idx = 0; 
+    while (idx < arr.length) {
+        if (arr[idx].innerHTML.split("<")[0] == value) {
+            arr[idx].style["background-color"] = "yellow";
+            return true;
+        }
+        for (var i = 0; i < arr[idx].children.length; i++) {
+            arr.push(arr[idx].children[i]);
+        }
+        idx++;
+    }
+    return false;
+}
+/**
  * beginDeepFirstScan() deep first button click callback function
  */
 function beginDeepFirstScan() {
@@ -166,15 +188,30 @@ function beginDeepFirstScan() {
  * beginBreadthFirstScan() breadth first button click callback function
  */
 function beginBreadthFirstScan() {
-    let root = document.getElementById("tree");
+    const root = document.getElementById("tree");
     if (root.children.length == 0) {
         return;
     }
-    let arr = [root.children[0]];
+    const arr = [root.children[0]];
     breadthFirstScan(arr);
     scanRender(arr, 0);
 }
 
+/**
+ * beginSearch() search the given value
+ */
+function beginSearch() {
+    const value = document.getElementById("search-text").value;
+    const root = document.getElementById("tree");
+    if (root.children.length == 0) {
+        alert("not found");
+        return;
+    }
+    const arr = [root.children[0]];
+    if (searchValue(arr, value) == false) {
+        alert("not found");
+    }
+}
 /**
  * init()
  */
@@ -183,10 +220,12 @@ function init() {
     let textarea = document.getElementById("content");
     let deepButton = document.getElementById("deep-first");
     let breadthButton = document.getElementById("breadth-first");
+    let search = document.getElementById("search");
     textarea.value = JSON.stringify(TEST, null, '  ');
     generate.onclick = renderTree;
     deepButton.onclick = beginDeepFirstScan;
     breadthButton.onclick = beginBreadthFirstScan;
+    search.onclick = beginSearch;
 }
 
 init();

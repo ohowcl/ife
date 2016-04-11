@@ -1,0 +1,23 @@
+body {
+    overflow: auto;
+}
+#tree {
+    overflow: auto;
+    height: 400px;
+}
+.node {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid green;
+    background-color: white;
+}
+pre {
+    border-left: 10px solid #ccc;
+    padding: 10px;
+    color: #317058;
+}
+.selected-node {
+    background-color: #ccc;
+}

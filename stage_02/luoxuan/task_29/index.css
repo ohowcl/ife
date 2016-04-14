@@ -1,0 +1,64 @@
+form {
+  width: 400px;
+}
+form label {
+  width: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  float: left;
+  display: block;
+  height: 20px;
+  padding: 6px;
+  color: black;
+  text-align: center;
+}
+form div {
+  padding: 0px;
+  margin: 0px 85px 0px 65px;
+}
+form div input {
+  display: inline-block;
+  width: 100%;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+form div input:focus {
+  outline: none;
+  border-color: blue;
+}
+form div .error-input {
+  border-color: red;
+}
+form div .correct-input {
+  border-color: green;
+}
+form div span {
+  display: inline-block;
+  font-size: 0.6em;
+  color: #ccc;
+  width: 100%;
+  height: 20px;
+}
+form div .error-hint {
+  color: red;
+}
+form div .correct-hint {
+  color: green;
+}
+form button {
+  width: 50px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  float: right;
+  display: block;
+  height: 30px;
+  padding: 5px;
+  border: 0px;
+  background-color: #2563AB;
+  border-radius: 4px;
+}

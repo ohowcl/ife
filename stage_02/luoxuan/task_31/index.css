@@ -1,0 +1,33 @@
+form {
+  width: 500px;
+}
+form fieldset {
+  border: 0px;
+}
+form #status-container {
+  width: 100%;
+}
+form #status-container .radio-select {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+form #student-container {
+  width: 100%;
+}
+form #student-container .school-item {
+  display: inline-block;
+  margin-left: 3%;
+  width: 30%;
+  float: left;
+  text-align: center;
+}
+form #nostudent-container {
+  display: none;
+  width: 100%;
+  text-align: center;
+}
+form #nostudent-container input {
+  width: 50%;
+}

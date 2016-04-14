@@ -1,0 +1,80 @@
+form {
+    width: 400px;
+    fieldset {
+        border: 0px;
+        label {
+            width: 25%;
+            font-weight: bold;
+            font-size: 20px;
+            float: left;
+            display: block;
+            height: 20px;
+            padding: 6px 0px;
+            color: black;
+            text-align: right;
+        }
+        div {
+            width: 70%;
+            float: right;
+            margin-left: 5%;
+            input {
+                display: inline-block;
+                width: 100%;
+                height: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                outline: none;
+                padding: 5px 10px;
+                font-size: 20px;
+            }
+            .input-hint {
+                border-color: blue;
+                &:focus {
+                    outline: none;
+                    box-shadow: 0px 0px 2px blue;
+                }
+            }
+            .input-error {
+                border-color: red;
+                &:focus {
+                    box-shadow: 0px 0px 2px red;
+                }
+            }
+            .input-correct {
+                border-color: green;
+                &:focus {
+                    box-shadow: 0px 0px 2px green;
+                }
+            }
+            span {
+                display: block;
+                margin-top: 2px;
+                font-size: 0.6em;
+                width: 100%;
+                height: 20px;
+            }
+            .hint {
+                color: blue;
+            }
+            .error {
+                color: red;
+            }
+            .correct {
+                color: green;
+            }
+        }
+    }
+    button {
+        width: 50px;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        float: right;
+        display: block;
+        height: 30px;
+        padding: 5px;
+        border: 0px;
+        background-color: #2563AB;
+        border-radius: 4px;
+    }
+}

@@ -1,0 +1,36 @@
+body {
+  margin: 40px;
+}
+#task31 {
+  font-size: 20px;
+  font-family: "simHei";
+}
+#form div {
+  text-align: right;
+  float: left;
+  margin: 10px 20px 10px 20px;
+}
+#form .at {
+  width: 100px;
+}
+#province select {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+}
+#school select {
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+}
+#form .hide {
+  display: none;
+}
+#employment input{
+  width: 540px;
+  height: 30px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  font-size: 20px;
+}

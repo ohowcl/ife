@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>task30</title>
+    <link href="task30.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="form">
+      <form id="content" class="" action="task29.html" method="post">
+
+        <div id="left">
+          <div class="left name">名称</div>
+          <div class="left pw">密码</div>
+          <div class="left pwconfirm">密码确认</div>
+          <div class="left email">邮箱</div>
+          <div class="left tel">手机</div>
+        </div>
+
+        <div id="right">
+          <div class="input">
+            <input id="name" type="text" name="name" value="" onfocus="ifocus(this)" onblur="disfocus(this)">
+          </div>
+          <div class="tip">
+            <span class="hide">必填，长度为4~16个字符</span>
+          </div>
+          <div class="input">
+            <input id="pw" type="password" name="name" value="" onfocus="ifocus(this)" onblur="disfocus(this)">
+          </div>
+          <div class="tip">
+            <span class="hide">密码为6-16位字符或数字</span>
+          </div>
+          <div class="input">
+            <input id="pwconfirm" type="password" name="name" value="" onfocus="ifocus(this)" onblur="disfocus(this)">
+          </div>
+          <div class="tip">
+            <span class="hide">再次输入密码</span>
+          </div>
+          <div class="input">
+            <input id="email" type="email" name="name" value="" onfocus="ifocus(this)" onblur="disfocus(this)">
+          </div>
+          <div class="tip">
+            <span class="hide">*******@**.com</span>
+          </div>
+          <div class="input">
+            <input id="tel" type="text" name="name" value="" onfocus="ifocus(this)" onblur="disfocus(this)">
+          </div>
+          <div class="tip">
+            <span class="hide">手机号码长度为11位数字</span>
+          </div>
+        </div>
+
+        <div id="submit">
+          <button id="btn" type="button" name="button" onclick="check()">验证</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script type="text/javascript" src="task30.js"></script>
+</html>

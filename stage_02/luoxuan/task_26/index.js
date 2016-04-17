@@ -281,7 +281,7 @@
             } else {
                 const probability = Math.random();
                 // set the probability of the message lost
-                if (probability > 0.1) {
+                if (probability > 0.3) {
                     if (info["cmd"] == "destory") {
                         Controller.destroyItem(info);
                     }

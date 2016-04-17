@@ -298,11 +298,17 @@
 
     Controller.init();
 
+    /**
+     * engine category
+     */
     const EngineCategory = {
         "0": {speed: 30, consumption: 5},
         "1": {speed: 40, consumption: 7},
         "2": {speed: 80, consumption: 9}
     };
+    /**
+     * energy category
+     */
     const EnergyCategory = {
         "0": 2,
         "1": 3,
@@ -313,6 +319,7 @@
     newButton.onclick = function() {
         const id = Controller.createItem();
         if (id != "-1") {
+            // get the engine type
             const engine = document.getElementsByName("engine");
             let selectedEngine;
             for (var i = 0; i < engine.length; i++) {
@@ -321,6 +328,7 @@
                     break;
                 }
             }
+            // get the energy
             const energy = document.getElementsByName("energy");
             let selectedEnergy;
             for (var i = 0; i < energy.length; i++) {

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <title>IFE task 26</title>
+    <link href="index.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="container">
+      <div id = "planet">
+      </div>
+    </div>
+    <div id="controller">
+    </div>
+    <div id="controller-new">
+      <div>
+        动力系统选择：
+        <label><input type="radio" name="engine" value="0" checked>前进号(速率30px/s, 能耗5%/s)</label>
+        <label><input type="radio" name="engine" value="1">奔腾号(速率50px/s, 能耗7%/s)</label>
+        <label><input type="radio" name="engine" value="2">超越号(速率80px/s, 能耗9%/s)</label>
+      </div>
+      <div>
+        能源系统选择：
+        <label><input type="radio" name="energy" value="0" checked>劲量型(补充能源速度2%/s)</label>
+        <label><input type="radio" name="energy" value="1">光能型(补充能源速度3%/s)</label>
+        <label><input type="radio" name="energy" value="2">永久型(补充能源速度4%/s)</label>
+      </div>
+      <button id="controller-new-item">新的飞船起飞</button>
+    </div>
+  </body>
+  <script type="text/javascript" src="index.js"></script>
+</html>

@@ -24,7 +24,7 @@ function validateName() {
     text[0].addEventListener("focusout",function() {
       var content = text[0].value.trim();
 
-      if(calLen(content) == 0) {
+      if(calLen(content) === 0) {
         text[0].parentNode.children[1].innerHTML = "姓名不能为空";
         text[0].parentNode.children[1].style.color = "red";
         text[0].style.border = "1px solid red";
@@ -40,9 +40,9 @@ function validateName() {
         text[0].style.border = "1px solid red";
         flag = false;
       }
-    })
+  });
 
-  })
+  });
 }
 
 function validatePsd() {
@@ -53,7 +53,7 @@ function validatePsd() {
     text[1].addEventListener("focusout",function() {
       var content = text[1].value.trim();
 
-      if(calLen(content) == 0) {
+      if(calLen(content) === 0) {
         text[1].parentNode.children[1].innerHTML = "密码不能为空";
         text[1].parentNode.children[1].style.color = "red";
         text[1].style.border = "1px solid red";
@@ -69,9 +69,9 @@ function validatePsd() {
         text[1].style.border = "1px solid red";
         flag = false;
       }
-    })
+  });
 
-  })
+  });
 }
 
 function validatePsdAgain() {
@@ -82,7 +82,7 @@ function validatePsdAgain() {
     text[2].addEventListener("focusout",function() {
       var content = text[1].value.trim();
 
-      if(text[2].value =="") {
+      if(text[2].value ==="") {
         text[2].parentNode.children[1].innerHTML = "不能为空";
         text[2].parentNode.children[1].style.color = "red";
         text[2].style.border = "1px solid red";
@@ -98,9 +98,9 @@ function validatePsdAgain() {
         text[2].style.border = "1px solid red";
         flag = false;
       }
-    })
+  });
 
-  })
+  });
 }
 
 function validateEmail() {
@@ -123,9 +123,9 @@ function validateEmail() {
         text[3].style.border = "1px solid red";
         flag = false;
       }
-    })
+  });
 
-  })
+  });
 
 }
 
@@ -150,9 +150,9 @@ function validateTel() {
         text[4].style.border = "1px solid red";
         flag = false;
       }
-    })
+  });
 
-  })
+  });
 }
 
 function calLen(content) {
@@ -172,10 +172,10 @@ function calLen(content) {
 
 function validateAll() {
   text[5].addEventListener("click",function() {
-    if(flag == true) {
+    if(flag === true) {
       alert("success!");
     }else {
       alert("input error,please check again!");
     }
-  })
+  });
 }

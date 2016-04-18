@@ -38,7 +38,7 @@ var nameInput = new FormStyle("name","名称","text",validateName,"必填，长�
 
 window.onload = function() {
   formEles[4].addEventListener("click",btnForm);
-}
+};
 
 function btnForm() {
   var str = "",

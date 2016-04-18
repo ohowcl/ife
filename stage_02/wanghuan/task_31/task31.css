@@ -1,16 +1,22 @@
 *{
-  font-family: SimHei;
-  font-size: 20px;
-  margin: 10px;
+    font-family: SimHei;
+    font-size: 20px;
+    margin: 10px;
 }
 form{
-  width: 500px;
-  margin: auto;
+    width: 500px;
+    margin: auto;
 }
 fieldset{
-  border: 0px;
+    border: 0px;
 }
 select{
-  width: 100px;
-  height: 30px;
+    width: 100px;
+    height: 30px;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
 }

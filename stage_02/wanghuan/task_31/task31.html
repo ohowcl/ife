@@ -1,41 +1,45 @@
 <!DOCTYPE>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>task31</title>
-    <link href="task31.css" rel="stylesheet">
-  </head>
+    <head>
+        <meta charset="utf-8">
+        <title>task31</title>
+        <link href="task31.css" rel="stylesheet">
+    </head>
 
-  <body>
+    <body>
     <form>
 
-      <fieldset>
-        <label><input type="radio" name="people" value="student">在校生</label>
-        <label><input type="radio" name="people" value="noStudent">非在校生</label>
-      </fieldset>
+        <fieldset>
+            <label><input type="radio" name="people" value="student" checked="checked">在校生</label>
+            <label><input type="radio" name="people" value="noStudent">非在校生</label>
+        </fieldset>
 
-      <fieldset>
-        <label for="city">城市
-          <select name="city" id="city">
-            <option>北京</option>
-            <option>上海</option>
-            <option>山东</option>
-          </select>
-        </label>
+        <fieldset>
+            <label for="city">城市
+              <select name="city" id="city">
+                <option>北京</option>
+                <option>上海</option>
+                <option>山东</option>
+              </select>
+            </label>
 
-        <label for="school">学校
-          <select name="school" id="school">
-          </select>
-        </label>
+            <label for="school">学校
+              <select name="school" id="school">
+                  <option>北京大学</option>
+                  <option>清华大学</option>
+                  <option>北京邮电大学</option>
+                  <option>北京师范大学</option>
+              </select>
+            </label>
 
-      </fieldset>
+        </fieldset>
 
-      <fieldset>
-        <label>就业单位<input type="text"/></label>
-      </fieldset>
+        <fieldset>
+            <label>就业单位<input type="text"/></label>
+        </fieldset>
 
     </form>
-  </body>
+    </body>
 
-  <script src="task31.js"></script>
+    <script src="task31.js"></script>
 </html>

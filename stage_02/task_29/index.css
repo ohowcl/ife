@@ -1,0 +1,39 @@
+body{
+  margin: 50px;
+}
+#content .input{
+  font-size: 25px;
+  font-family: "SimHei";
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#content .tip {
+  font-size: 20px;
+  font-family: "SimHei";
+  margin-left: 70px;
+  margin-bottom: 10px;
+  color: #D0D0D0;
+}
+#input {
+  width: 400px;
+  height: 50px;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #D0D0D0;
+  font-size: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#btn {
+  width: 80px;
+  height: 56px;
+  font-size: 25px;
+  font-family: "SimHei";
+  font-weight: bold;
+  border-radius: 5px;
+  border-width: 0px;
+  border-style: solid;
+  color: #FFFFFF;
+  background-color: #3366cc;
+}

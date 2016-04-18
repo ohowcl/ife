@@ -1,0 +1,61 @@
+body{
+  margin: 50px;
+}
+#choice {
+  margin-bottom: 20px;
+}
+#form {
+  width: 600px;
+}
+#left {
+  width: 100px;
+  float: left;
+}
+#right {
+  width:500px;
+  float: left;
+}
+.hide {
+  display: none;
+}
+#content .left{
+  font-size: 20px;
+  font-family: "SimHei";
+  font-weight: bold;
+  margin-bottom: 23px;
+  text-align: right;
+}
+#content .tip {
+  font-size: 15px;
+  font-family: "SimHei";
+  margin-left: 20px;
+  margin-bottom: 10px;
+  color: #D0D0D0;
+}
+#name, #pw, #pwconfirm, #email, #tel {
+  width: 400px;
+  height: 30px;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #D0D0D0;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#submit {
+  float: right;
+  margin-right: 76px;
+}
+#btn {
+  width: 80px;
+  height: 36px;
+  font-size: 20px;
+  font-family: "SimHei";
+  font-weight: bold;
+  border-radius: 5px;
+  border-width: 0px;
+  border-style: solid;
+  color: #FFFFFF;
+  background-color: #3366cc;
+}

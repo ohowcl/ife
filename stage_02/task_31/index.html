@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>task31</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div id="task31">
+      <div id="radio">
+        <input type="radio" name="radiobutton" value="0" checked onChange="showandhide()"> 在校生
+        <input type="radio" name="radiobutton" value="1" onChange="showandhide()"> 非在校生
+      </div>
+      <div id="form">
+
+        <form class="student show">
+          <div class="at">
+            <span>学校</span>
+          </div>
+          <div id="province">
+            <select class="province" name="province" onChange="getschool()">
+              <option value ="0">请选择所在城市</option>
+              <option value ="beijing">北京</option>
+              <option value ="wuhan">武汉</option>
+              <option value="shanghai">上海</option>
+            </select>
+          </div>
+          <div id="school">
+            <select class="school" name="school">
+              <option value ="0">请选择学校</option>
+            </select>
+          </div>
+        </form>
+
+        <form class="graduate hide">
+          <div class="at">
+            <span>就业单位</span>
+          </div>
+          <div id="employment">
+            <input type="text" name="name" value="">
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="index.js"></script>
+</html>

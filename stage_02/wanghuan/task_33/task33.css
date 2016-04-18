@@ -1,0 +1,17 @@
+table{
+    border-collapse: collapse;
+    empty-cells: show;
+    font-weight: bold;
+    font-family: SimHei;
+    text-align: center;
+}
+td{
+    border: 1px solid black;
+}
+td{
+    height: 50px;
+    width: 50px;
+}
+td:nth-child(1){
+    border: 0px;
+}

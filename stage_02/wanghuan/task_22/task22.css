@@ -1,27 +1,27 @@
 .root {
-  display: flex;
-  border: 1px solid black;
-  margin: 20px;
-  padding: 10px;
-  width: 1000px;
-  height: 300px;
-  flex-direction: row;
+    display: flex;
+    border: 1px solid black;
+    margin: 20px;
+    padding: 10px;
+    width: 1000px;
+    height: 300px;
+    flex-direction: row;
 }
 
 .child1 {
-  display: flex;
-  border: 1px solid black;
-  margin: 20px;
-  flex-grow: 1;
+    display: flex;
+    border: 1px solid black;
+    margin: 20px;
+    flex-grow: 1;
 }
 .child2 {
-  display: flex;
-  border: 1px solid black;
-  margin: 20px;
-  flex-grow: 1;
+    display: flex;
+    border: 1px solid black;
+    margin: 20px;
+    flex-grow: 1;
 }
 .child3 {
-  border: 1px solid black;
-  margin: 20px;
-  flex-grow: 1;
+    border: 1px solid black;
+    margin: 20px;
+    flex-grow: 1;
 }

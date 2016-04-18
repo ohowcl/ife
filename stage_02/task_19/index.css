@@ -1,0 +1,14 @@
+#queue {
+    padding: 5px;
+    width: auto;
+    height: 400px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.item {
+    width: 30px;
+    margin-left: 5px;
+    color: white;
+    background-color: red;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>task25</title>
+    <link href="index.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="root"><span>root</span>
+
+      <div class="child1"><span>child1-1</span>
+
+        <div class="child2"><span>child2-1</span>
+
+          <div class="child3"><span>child3-1</span>
+          </div>
+          <div class="child3"><span>child3-2</span>
+          </div>
+          <div class="child3"><span>child3-3</span>
+          </div>
+
+        </div>
+
+
+      </div>
+
+      <div class="child1"><span>child1-2</span>
+
+        <div class="child2"><span>child2-2</span>
+
+          <div class="child3"><span>child3-4</span>
+          </div>
+          <div class="child3"><span>child3-5</span>
+          </div>
+
+        </div>
+
+        <div class="child2"><span>child2-3</span>
+
+          <div class="child3"><span>child3-6</span>
+          </div>
+          <div class="child3"><span>child3-7</span>
+          </div>
+
+        </div>
+
+        <div class="child2"><span>child2-4</span>
+
+          <div class="child3"><span>child3-8</span>
+          </div>
+          <div class="child3"><span>child3-9</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      </div>
+
+    </div>
+
+    <form>
+      <input type="radio" name="traverse" id="before"/>
+      <label for="before">前序遍历</label>
+      <input type="radio" name="traverse" id="behind"/>
+      <label for="behind">后序遍历</label>
+      <br/>
+
+      <input type="text" id="text1"/>
+      <input type="button" value="前序优先搜索" id="befSearch"/>
+
+      <input type="text" id="text2"/>
+      <input type="button" value="后序优先搜索" id="behSearch"/>
+      <br/>
+
+      <input type="button" value="删除" id="delete"/>
+      <br/>
+      <input type="text" id="text3"/>
+      <input type="button" value="添加" id="add"/>
+    </form>
+
+    <script src="index.js"></script>
+  </body>
+</html>

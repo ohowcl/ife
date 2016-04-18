@@ -1,0 +1,43 @@
+#tag-container {
+    overflow: auto;
+    margin: 20px 0px;
+}
+.tag {
+    display: inline-block;
+    float: left;
+    background-color: green;
+    color: white;
+    height: 20px;
+    margin: 5px;
+    font-size: 20px;
+    padding: 3px 5px;
+}
+.tag:hover {
+    background-color: red;
+    cursor: pointer;
+}
+.tag:hover::before {
+    content: "删除";
+}
+textarea {
+    display: block;
+}
+#it-confirm {
+    display: block;
+}
+
+#it-container {
+    overflow: auto;
+    margin: 20px 0px;
+}
+
+.it {
+    display: inline-block;
+    float: left;
+    background-color: purple;
+    color: white;
+    height: 20px;
+    margin: 5px;
+    font-size: 20px;
+    padding: 3px 5px;
+}

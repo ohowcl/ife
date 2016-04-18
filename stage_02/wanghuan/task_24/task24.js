@@ -32,10 +32,10 @@ function defButton() {
 			}
 		}
 		tree.animation();
-		if(flag == 0) {
+		if(flag === 0) {
 			alert("find the content which you input,look the process please");
 		}else {
-			alert("there are not the content which you input,look the process please")
+			alert("there are not the content which you input,look the process please");
 		}
 	});
 
@@ -52,10 +52,10 @@ function defButton() {
 			}
 		}
 		tree.animation();
-		if(flag == 0) {
+		if(flag === 0) {
 			alert("find the content which you input,look the process please");
 		}else {
-			alert("there are not the content which you input,look the process please")
+			alert("there are not the content which you input,look the process please");
 		}
 	});
 
@@ -75,9 +75,9 @@ function defButton() {
 		tree.targetNode = event.target;
 		tree.targetNode.id="targetNode";
 		tree.targetNode.style.border = "1px solid red";
-	})
+	});
 
-};
+}
 
 function Tree() {
 	this.nodes = [];
@@ -135,11 +135,11 @@ Tree.prototype.deleteNode = function() {
 	} else {
 		alert("we can not remove rootNode");
 	}
-}
+};
 
 Tree.prototype.addNode = function() {
 	var addText = document.getElementById('text3').value.trim();
-	if(addText == "") {
+	if(addText === "") {
 		alert("please input the value");
 	}else if(this.targetNode) {
 		var newNode = document.createElement("div");
@@ -148,4 +148,4 @@ Tree.prototype.addNode = function() {
 		this.targetNode.appendChild(newNode);
 		this.targetNode.style.border = "1px solid black";
 	}
-}
+};

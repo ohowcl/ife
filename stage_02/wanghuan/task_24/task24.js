@@ -96,7 +96,6 @@ function defButton() {
 		}
 		//将最新选择的div的border设置为red
 		tree.targetNode = event.target;
-		tree.targetNode.id="targetNode";
 		tree.targetNode.style.border = "1px solid red";
 	});
 }
@@ -170,6 +169,9 @@ Tree.prototype.animation = function() {
 
 };
 
+/*
+ *	删除选中的节点
+ */
 Tree.prototype.deleteNode = function() {
 	if(this.targetNode && this.targetNode != this.root1) {
 		this.targetNode.parentNode.removeChild(this.targetNode);
@@ -179,6 +181,9 @@ Tree.prototype.deleteNode = function() {
 	}
 };
 
+/*
+ *	增加节点
+ */
 Tree.prototype.addNode = function() {
 	var addText = document.getElementById('text3').value.trim();
 	if(addText === "") {

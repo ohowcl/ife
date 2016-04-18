@@ -1,0 +1,40 @@
+@width: 900px;
+@height: 500px;
+#container {
+    width: @width;
+    height: @height;
+    background-color: #6699FF;
+    position: relative;
+    #planet {
+        background-color: #FFFF99;
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        top: 200px;
+        left: 400px;
+        position: absolute;
+    }
+    .ship {
+        width: 30px;
+        height: 60px;
+        word-break: break-all;
+        background-color: #FFFF99;
+        position: absolute;
+        border-radius: 15px;
+    }
+}
+#controller {
+    width: @width;
+    height: 100px;
+    overflow: auto;
+    background-color: #ccc;
+    .panel {
+        width: 100%;
+        height: auto;
+        margin-bottom: 5px;
+    }
+}
+#controller-new {
+    width: @width;
+    background-color: #ccc;
+}

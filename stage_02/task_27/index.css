@@ -1,0 +1,38 @@
+#container {
+  width: 900px;
+  height: 500px;
+  background-color: #6699FF;
+  position: relative;
+}
+#container #planet {
+  background-color: #FFFF99;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  top: 200px;
+  left: 400px;
+  position: absolute;
+}
+#container .ship {
+  width: 30px;
+  height: 60px;
+  word-break: break-all;
+  background-color: #FFFF99;
+  position: absolute;
+  border-radius: 15px;
+}
+#controller {
+  width: 900px;
+  height: 100px;
+  overflow: auto;
+  background-color: #ccc;
+}
+#controller .panel {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+}
+#controller-new {
+  width: 900px;
+  background-color: #ccc;
+}

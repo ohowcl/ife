@@ -15,7 +15,7 @@ function showandhide(){
           break;
         }
       }
-  if (chk == 0) {
+  if (chk == 0) {//根据单选框的值选择显示表单
     form1.setAttribute("class","student show");
     form2.setAttribute("class","graduate hide");
   }
@@ -26,17 +26,17 @@ function showandhide(){
 }
 
 function getschool(){
-   //获得省份下拉框的对象
+   //获得城市下拉框的对象
    var sltProvince=document.getElementById("province").firstElementChild;
    //获得学校下拉框的对象
    var sltSchool=document.getElementById("school").firstElementChild;
-   //得到对应省份的城市数组
+   //得到对应城市的学校数组
    var provinceCity=school[sltProvince.selectedIndex - 1];
 
    //清空城市下拉框，仅留提示选项
    sltSchool.length=1;
 
-   //将城市数组中的值填充到城市下拉框中
+   //将学校数组中的值填充到城市下拉框中
    if (sltProvince.selectedIndex!=0) {
      for (var i=0;i<provinceCity.length;i++) {
        sltSchool[i+1]=new Option(provinceCity[i],provinceCity[i]);

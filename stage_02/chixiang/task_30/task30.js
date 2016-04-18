@@ -1,16 +1,16 @@
-var alphaReg = /^[\u4e00-\u9fa5]+$/i,
-    reg = /^[\w]{6,16}$/,
-    telnum = /^[\d]{11}$/;
+var alphaReg = /^[\u4e00-\u9fa5]+$/i,//中文
+    reg = /^[\w]{6,16}$/,//密码格式
+    telnum = /^[\d]{11}$/;//手机号码格式
     name=pw=pwconfirm=email=tel=0;
 
-function ifocus(x) {
+function ifocus(x) {//获得input焦点，当得到焦点时显示输入提示
   var parent = x.parentNode;
   var temp = parent.nextElementSibling;
   temp.firstElementChild.setAttribute("class","show");
   document.getElementsByClassName(x.id)[0].style.marginBottom="40px";
 }
 
-function disfocus(x) {
+function disfocus(x) {//当时去焦点时显示输入正确与否的提示
   switch (x.id) {
     case "name":
       if (x.value.trim()=="") {
@@ -33,7 +33,7 @@ function disfocus(x) {
       }
       break;
     case "pw":
-      if (!x.value.match(reg)||x.value=="") {
+      if (!x.value.match(reg)||x.value=="") {//密码为6-16位不能为空
         var parent = x.parentNode;
         var temp = parent.nextElementSibling;
         temp.firstElementChild.setAttribute("class","show");
@@ -73,7 +73,7 @@ function disfocus(x) {
       }
       break;
     case "email":
-      if (x.value.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1) {
+      if (x.value.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1) {//邮箱满足格式要求
         var parent = x.parentNode;
         var temp = parent.nextElementSibling;
         temp.firstElementChild.setAttribute("class","show");
@@ -93,7 +93,7 @@ function disfocus(x) {
       }
       break;
     case "tel":
-      if (telnum.test(x.value)) {
+      if (telnum.test(x.value)) {//手机号码满足格式要求
         var parent = x.parentNode;
         var temp = parent.nextElementSibling;
         temp.firstElementChild.setAttribute("class","show");
@@ -116,7 +116,7 @@ function disfocus(x) {
 
   }
 }
-
+//点击提交后的操作
 function check() {
   if (name&&pw&&pwconfirm&&email&&tel) {
     alert("输入正确");

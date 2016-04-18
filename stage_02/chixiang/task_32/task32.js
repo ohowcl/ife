@@ -5,10 +5,12 @@ var alphaReg = /^[\u4e00-\u9fa5]+$/i,
 
 var forms = document.getElementById("right");
 var lab0=lab1=lab2=lab3=0;
+
+//生成表单
 function generate() {
   var checklabels = document.getElementsByName("label");
   var tips = document.getElementsByClassName("tip");
-  if (checklabels[0].checked) {
+  if (checklabels[0].checked) {//显示姓名输入框
     document.getElementsByClassName("name")[0].setAttribute("class","left name show");
     document.getElementsByClassName("name")[1].setAttribute("class","input name show");
     tips[0].setAttribute("class","tip");
@@ -20,7 +22,7 @@ function generate() {
     tips[0].setAttribute("class","tip hide");
     lab0 = 0;
   }
-  if (checklabels[1].checked) {
+  if (checklabels[1].checked) {//显示密码输入框
     document.getElementsByClassName("pw")[0].setAttribute("class","left pw show");
     document.getElementsByClassName("pw")[1].setAttribute("class","input pw show");
     document.getElementsByClassName("pwconfirm")[0].setAttribute("class","left pwconfirm show");
@@ -38,7 +40,7 @@ function generate() {
     tips[2].setAttribute("class","tip hide");
     lab1 = 0
   }
-  if (checklabels[2].checked) {
+  if (checklabels[2].checked) {//显示email输入框
     document.getElementsByClassName("email")[0].setAttribute("class","left email show");
     document.getElementsByClassName("email")[1].setAttribute("class","input email show");
     tips[3].setAttribute("class","tip");
@@ -50,7 +52,7 @@ function generate() {
     tips[3].setAttribute("class","tip hide");
     lab2 = 0;
   }
-  if (checklabels[3].checked) {
+  if (checklabels[3].checked) {//显示电话输入框
     document.getElementsByClassName("tel")[0].setAttribute("class","left tel show");
     document.getElementsByClassName("tel")[1].setAttribute("class","input tel show");
     tips[4].setAttribute("class","tip");
@@ -62,7 +64,7 @@ function generate() {
     tips[4].setAttribute("class","tip hide");
     lab3 = 0;
   }
-  if (lab0||lab1||lab2||lab3) {
+  if (lab0||lab1||lab2||lab3) {//如果都没选中，隐藏按钮
     document.getElementById("submit").setAttribute("class","show");
   }
   else {
@@ -70,6 +72,7 @@ function generate() {
   }
 }
 
+//改变样式
 function changestyle() {
   var chk = document.getElementsByName("radiobutton");
   var leftlable = document.getElementsByClassName("left");

@@ -1,0 +1,44 @@
+#btn {
+  padding-left: 10px;
+}
+div{
+    display: flex;
+    align-items: stretch;
+    justify-content:flex-start;
+    padding: 1px;
+    margin: 5px;
+    border-radius: 6px;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    background-color: #FFFFFF;
+    padding-left: 2em;
+}
+#root{
+    margin: 10px 10px;
+    width: 1px;
+}
+.now{
+    background-color: #ff001a;
+}
+.del, span:hover{
+    background-color: #080e6a;
+}
+#hide{
+    display: none;
+}
+.hide{
+    display: none;
+}
+span,.rec{
+    width: 6em;
+    color: #FFFFFF;
+    background-color: #015dd1;
+    padding: 4px;
+    border-radius: 5px;
+}
+.show{
+    display: flex;
+}
+.found{
+    background-color: green;
+}

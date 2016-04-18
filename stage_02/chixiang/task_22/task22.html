@@ -3,18 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>task22</title>
-    <style media="screen">
-      #btn {
-        padding-left: 10px;
-      }
-      div {
-        border: 1px solid #000000;
-        padding: 10px;
-        margin: 10px;
-        float: left;
-        background-color: white;
-      }
-    </style>
+    <link rel="stylesheet" href="task22.css">
   </head>
   <body>
     <section id="btn">
@@ -45,66 +34,6 @@
   		</div>
     </div>
   </body>
-  <script type="text/javascript">
-
-    var queue = [], head, timer;
-
-    function preOrder(node) {
-      if (node) {
-        queue.push(node);
-        preOrder(node.firstElementChild);
-        preOrder(node.lastElementChild);
-      }
-    }
-
-    function inOrder(node) {
-      if (node) {
-        inOrder(node.firstElementChild);
-        queue.push(node);
-        inOrder(node.lastElementChild);
-      }
-    }
-
-    function postOrder(node) {
-      if (node) {
-        postOrder(node.firstElementChild);
-        postOrder(node.lastElementChild);
-        queue.push(node);
-      }
-    }
-
-    btn.onclick = function (e){
-    				if (queue.length > 0) {
-    					head.style.backgroundColor = "#fff";
-    					showQueue = [];
-    					clearTimeout(timer);
-    				}
-
-            switch (e.target.id) {
-            					case "pre" :
-            					preOrder(document.getElementById("root"));
-            					break;
-            					case "in" :
-            					inOrder(document.getElementById("root"));
-            					break;
-            					case "post" :
-            					postOrder(document.getElementById("root"));
-            					break;
-            				}
-
-    				show();
-    				function show() {
-    					head = queue.shift();
-    					if (head) {
-    						head.style.backgroundColor = "Blue";
-    						timer = setTimeout(function(){
-    							head.style.backgroundColor = "White";
-    							show();
-    						}, 500);
-    					}
-    				}
-
-    			};
-
+  <script type="text/javascript" src="task22.js"> 
   </script>
 </html>

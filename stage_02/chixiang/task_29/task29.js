@@ -3,10 +3,10 @@ var alphaReg = /^[\u4e00-\u9fa5]+$/i,
     tip = document.getElementById("tip");
 
 function check() {
-  var contents = text.value.trim();
+  var contents = text.value.trim();//获取input输入
   var len = 0;
   for (var i = 0; i < contents.length; i++) {
-    if(alphaReg.test(contents[i]))
+    if(alphaReg.test(contents[i]))//如果是中文字符长度+2
       len += 2;
     else
       len ++

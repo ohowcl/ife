@@ -16,3 +16,12 @@ div#logo {
     border: 0px;
     padding: 0px;
 }
+
+.oho-list {
+    overflow: auto;
+}
+.oho-list li {
+    width: 33.3%;
+    float: left;
+}
+

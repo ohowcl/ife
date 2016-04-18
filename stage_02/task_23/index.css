@@ -1,0 +1,29 @@
+.root {
+    display: flex;
+    border: 1px solid black;
+    margin: 20px;
+    padding: 10px;
+    width: 1200px;
+    height: 300px;
+    flex-direction: row;
+}
+div{
+    text-align: center;
+}
+.child1 {
+    display: flex;
+    border: 1px solid black;
+    margin: 10px;
+    flex-grow: 1;
+}
+.child2 {
+    display: flex;
+    border: 1px solid black;
+    margin: 10px;
+    flex-grow: 1;
+}
+.child3 {
+    border: 1px solid black;
+    margin: 10px;
+    flex-grow: 1;
+}

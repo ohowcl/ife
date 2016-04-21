@@ -67,6 +67,8 @@ const Contianer = {
      */
     cmdGo: function(step) {
         const num = step || 1;
+
+        // get the direction of the widget
         let dir = this.direction % 4;
         if (dir < 0) {
             dir += 4;
@@ -155,6 +157,7 @@ const Contianer = {
      * command() exec the command
      *
      * @param {String} cmd
+     * @return {Boolean}
      */
     command: function(args) {
         if (args == "") {
@@ -194,11 +197,22 @@ Contianer.init();
 
 //binding event
 const executeButton = document.getElementById("execute");
+// the execute button callback
 executeButton.onclick = function() {
     const values = document.getElementById("commands-content").children;
+    
+    // the cmd execute function
     const execCommands = function(elements, idx) {
         if (idx < elements.length) {
-            Contianer.command(elements[idx].innerHTML);
+            const hints = document.getElementById("commands-hint");
+
+            // if the command not right mark it and stop running
+            if (Contianer.command(elements[idx].innerHTML) == false) {
+                hints.children[idx].classList.add("hint-error");
+                return;
+            } else {
+                hints.children[idx].classList.remove("hint-error");
+            }
             window.setTimeout(execCommands, 1000, elements, idx + 1);
         }
     }
@@ -206,7 +220,10 @@ executeButton.onclick = function() {
         execCommands(values, 0);
     }
 }
+
+// binding the refresh command
 const refreshButton = document.getElementById("refresh");
+// the refresh callback
 refreshButton.onclick = function() {
     const conmmandsContent = document.getElementById("commands-content");
     conmmandsContent.innerHTML = "<div></div>";
@@ -219,12 +236,17 @@ refreshButton.onclick = function() {
     conmmandsHint.appendChild(hintItem);
     conmmandsHint.appendChild(hintItem);
 }
+
+// listening the key down event
 document.onkeydown = function(e) {
-    // e.stopPropagation();
-    console.log(e.target.tagName + " " + e.target.id);
+    e.stopPropagation();
+    
+    // prevent detele all element in the input window
     if (e.target.id == "commands-content" && e.target.innerHTML == "") {
         e.target.innerHTML = "<div></div>";
     }
+
+    // listening the enter key down, for the new line
     if (e.target.id == "commands-content" && e.code == "Enter") {
         const hints = document.getElementById("commands-hint");
         while (hints.children.length - 1 < e.target.children.length) {
@@ -234,21 +256,24 @@ document.onkeydown = function(e) {
             hints.appendChild(hintItem);
         }
     }
-    if ( e.target.innerHTML.length == 11 && e.code == "Backspace") {
+
+    // prevent the delete all content in the input window
+    if (e.target.innerHTML.length == 11 && e.code == "Backspace") {
         return false;
     }
-    if ( e.target.innerHTML.length == 12 && e.code == "Backspace") {
+    if (e.target.innerHTML.length == 12 && e.code == "Backspace") {
         e.target.children[0].textContent = "";
         return false;
     }
 }
+
+// listening the key up event
 document.onkeyup = function(e) {
     if (e.target.id == "commands-content") {
         const hints = document.getElementById("commands-hint");
-        // if ((e.target.innerHTML == "<div></div>")) {
-          //  return false;
-        //}
     }
+
+    // remove the line number
     if (e.target.id == "commands-content" && e.code == "Backspace") {
         const hints = document.getElementById("commands-hint");
         while (hints.children.length > e.target.children.length) {

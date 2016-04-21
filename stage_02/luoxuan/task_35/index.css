@@ -33,13 +33,13 @@
 }
 #commands-container {
   width: 500px;
-  min-height: 100px;
+  min-height: 400px;
   height: auto;
   overflow: auto;
 }
 #commands-container #commands-content {
   width: 470px;
-  min-height: 100px;
+  min-height: 400px;
   height: auto;
   background-color: black;
   color: white;
@@ -59,7 +59,7 @@
 }
 #commands-container #commands-hint {
   width: 28px;
-  min-height: 100px;
+  min-height: 400px;
   float: left;
   height: 100%;
   background-color: black;
@@ -71,4 +71,7 @@
   line-height: 24px;
   font-size: 20px;
   height: 24px;
+}
+#commands-container #commands-hint .hint-error {
+  background-color: red;
 }

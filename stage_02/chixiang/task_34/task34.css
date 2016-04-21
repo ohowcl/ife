@@ -1,0 +1,57 @@
+#hole {
+  width: 420px;
+  height: 500px;
+}
+#row {
+  width: 400px;
+  height: 20px;
+  float: right;
+}
+#row div {
+  width: 40px;
+  height: 20px;
+  float: left;
+  text-align: center;
+}
+#col {
+  margin-top: 20px;
+  width: 20px;
+  height: 400px;
+  float: left;
+}
+#col div {
+  padding-top: 10px;
+  width: 20px;
+  height: 30px;
+  text-align: center;
+}
+#board {
+  width: 400px;
+  height: 400px;
+  float: left;
+  border-collapse: collapse;
+  border: none;
+}
+#command  input{
+  margin-top: 10px;
+  margin-left: 20px;
+}
+#block {
+  width: 39px;
+  height: 39px;
+  position: absolute;
+  left: 228px;
+  top: 228px;
+  -webkit-transition: left 0.5s, top 0.5s, width 0.5s, height 0.5s, -webkit-transform 0.5s;
+  transition: left 0.5s, top 0.5s, width 0.5s, height 0.5s, transform 0.5s;
+}
+#block .blue {
+  width: 39px;
+  height: 25%;
+  background-color: blue;
+}
+#block .red {
+  width: 39px;
+  height: 75%;
+  background-color: red;
+}

@@ -7,8 +7,8 @@ function defButton() {
 			preSearchButton = document.getElementById('befSearch'),
 			postSearchButton = document.getElementById('behSearch'),
 			delButton = document.getElementById('delete'),
-			addButton = document.getElementById('add');
-			// img[0] = 'url("1.png") 0 3px rgb(139, 202, 255) no-repeat';
+			addButton = document.getElementById('add'),
+			targetArray = [];
 
 	preButton.addEventListener("click",function(){
 		tree.preOrder(root);
@@ -33,10 +33,10 @@ function defButton() {
 			}
 		}
 		tree.animation();
-		if(flag == 0) {
+		if(flag === 0) {
 			alert("find the content which you input,look the process please");
 		}else {
-			alert("there are not the content which you input,look the process please")
+			alert("there are not the content which you input,look the process please");
 		}
 	});
 
@@ -53,10 +53,10 @@ function defButton() {
 			}
 		}
 		tree.animation();
-		if(flag == 0) {
+		if(flag === 0) {
 			alert("find the content which you input,look the process please");
 		}else {
-			alert("there are not the content which you input,look the process please")
+			alert("there are not the content which you input,look the process please");
 		}
 	});
 
@@ -73,11 +73,25 @@ function defButton() {
 	});
 
 	root.addEventListener("click",function(event) {
+		var j;
+
 		tree.targetNode = event.target;
 		if(event.target.nodeName == "SPAN") {
 			tree.targetNode = tree.targetNode.parentNode;
 		}
-		tree.targetNode.id = "targetNode";
+
+		targetArray.push(tree.targetNode);
+
+		// 当多次选择多个div时，清除之前选择的
+		if(targetArray.length > 1) {
+			// 清除之前选择的div，将之前选择的border恢复
+			for(j = 0;j < targetArray.length - 1;j++) {
+				targetArray[j].style.border = "0px";
+			}
+		}
+
+		tree.targetNode.style.border = "1px solid #006FCC";
+		// tree.targetNode.style.border = "0 0 3px #006FCC";
 		for(var i = 0,len = tree.targetNode.children.length;i < len;i++) {
 				if(tree.targetNode.children[i].nodeName == "DIV") {
 						tree.targetNode.children[i].style.display = tree.targetNode.children[i].style.display == 'none' ? 'block' : 'none' ;
@@ -85,8 +99,13 @@ function defButton() {
 		}
 	});
 
-};
+}
 
+/*
+ *	构造函数Tree
+ *	nodes:存储所有的节点
+ *	move:控制遍历，以免在遍历时点击其他按钮混乱
+ */
 function Tree() {
 	this.nodes = [];
 	this.move = false;
@@ -95,6 +114,10 @@ function Tree() {
 	this.fold = false;
 }
 
+/*
+ *	先序遍历Tree
+ *	node；遍历的节点
+ */
 Tree.prototype.preOrder = function(node) {
 	this.nodes.push(node);
 	for(var i = 0,len = node.children.length;i< len;i++) {
@@ -104,6 +127,10 @@ Tree.prototype.preOrder = function(node) {
 	}
 };
 
+/*
+ *	后序遍历Tree
+ *	node；遍历的节点
+ */
 Tree.prototype.postOrder = function(node) {
 	for(var i = 0,len = node.children.length;i< len;i++) {
 		if(node.children[i].nodeName == "DIV") {
@@ -113,7 +140,9 @@ Tree.prototype.postOrder = function(node) {
 	this.nodes.push(node);
 };
 
-
+/*
+ *	动画显示树的遍历过程
+ */
 Tree.prototype.animation = function() {
 	var nodes = this.nodes,
 			i = 0,
@@ -123,16 +152,20 @@ Tree.prototype.animation = function() {
 
 	self.nodes = [];
 
+	// move为false时，才执行动画，以免重复点击混乱
 	if(!self.move) {
 		self.move = true;
 		nodes[i].style.background = "red";
 
+		// 设置计时器
 		var timer = setInterval(function(){
+			// 当动画到最后一个节点时背景重新变白，move重置，清除计时器
 			if(i == len-1) {
 				nodes[i].style.background = "white";
 				self.move = false;
 				clearInterval(timer);
 			} else {
+				// node的逐个显示
 				++i;
 				nodes[i-1].style.background = "white";
 				nodes[i].style.background = "red";
@@ -142,17 +175,23 @@ Tree.prototype.animation = function() {
 
 };
 
+/*
+ *	删除选中的节点
+ */
 Tree.prototype.deleteNode = function() {
 	if(this.targetNode && this.targetNode != this.root1) {
 		this.targetNode.parentNode.removeChild(this.targetNode);
 	} else {
 		alert("we can not remove rootNode");
 	}
-}
+};
 
+/*
+ *	增加节点
+ */
 Tree.prototype.addNode = function() {
 	var addText = document.getElementById('text3').value.trim();
-	if(addText == "") {
+	if(addText === "") {
 		alert("please input the value");
 	}else if(this.targetNode) {
 		var newNode = document.createElement("div");
@@ -161,4 +200,4 @@ Tree.prototype.addNode = function() {
 		this.targetNode.appendChild(newNode);
 		this.targetNode.style.border = "1px solid black";
 	}
-}
+};

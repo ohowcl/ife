@@ -1,0 +1,34 @@
+*{
+    font-family: SimHei;
+}
+table{
+    border-collapse: collapse;
+    empty-cells: show;
+    font-weight: bold;
+    text-align: center;
+}
+td{
+    border: 1px solid black;
+}
+td{
+    height: 50px;
+    width: 50px;
+}
+td:nth-child(1),
+.top{
+    border: 0px;
+}
+input{
+    width: 70px;
+    margin: 10px;
+}
+#inputCommand{
+    width: 250px;
+}
+.divSpecial{
+    border-top: 10px solid green;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    transform: rotate();
+}

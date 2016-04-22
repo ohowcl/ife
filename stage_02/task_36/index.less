@@ -1,0 +1,80 @@
+#board {
+    width: 600px;
+    height: 600px;
+    border: 2px solid black;
+    position: relative;
+    float: left;
+    .cell {
+        width: 40px;
+        height: 40px;
+        float: left;
+        outline: 1px solid #ccc;
+        background-color: green;
+        &:hover {
+            outline-color: yellow;
+        }
+    }
+    #widget {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        background: linear-gradient(0deg, red, red 50%, blue 51%, blue);
+        -webkit-transition: top 1s, left 1s, transform 1s;
+        transition: top 1s, left 1s, transform 1s;
+    }
+}
+#controller {
+    width: 600px;
+    height: auto;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    float: left;
+}
+#input-container {
+    margin: 0px 5px;
+}
+#commands-container{
+    width: 500px;
+    min-height: 400px;
+    height: auto;
+    overflow: auto;
+    #commands-content {
+        width: 470px;
+        min-height: 400px;
+        height: auto;
+        background-color: black;
+        color: white;
+        float: left;
+        line-height: 24px;
+        font-size: 20px;
+        overflow: auto;
+        &:focus {
+            box-shadow: 0px 0px 0px;
+        }
+        div {
+            height: 24px;
+            &:hover {
+                background-color: #ccc;
+            }
+        }
+    }
+    #commands-hint {
+        width: 28px;
+        min-height: 400px;
+        float: left;
+        height: 100%;
+        background-color: black;
+        border-right: 2px solid blue;
+        text-align: center;
+        color: yellow;
+        .hint-item {
+            line-height: 24px;
+            font-size: 20px;
+            height: 24px;
+        }
+        .hint-error {
+            background-color: red;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+list=`seq 43 45`
+for a in $list
+do
+    mkdir task_$a
+    touch task_$a/index.html
+    touch task_$a/index.css
+    touch task_$a/index.js
+done

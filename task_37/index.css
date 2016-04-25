@@ -1,0 +1,85 @@
+body {
+  margin: 0px;
+}
+.pp-cover {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+.pp-box {
+  position: fixed;
+}
+.pp-box .pp-box-title {
+  font-size: 1.3em;
+  height: 15%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.pp-box .pp-box-title:before {
+  display: block;
+  content: "";
+  height: 20%;
+}
+.pp-box .pp-box-content {
+  font-size: 1em;
+  height: 65%;
+  padding: 0 2%;
+}
+.pp-box .pp-box-content:before {
+  display: block;
+  content: "";
+  height: 5%;
+}
+.pp-box .pp-box-content:after {
+  display: block;
+  content: "";
+  height: 5%;
+}
+.pp-box .pp-box-footer {
+  height: 20%;
+}
+.pp-box .pp-box-footer:before {
+  display: block;
+  content: "";
+  height: 10%;
+}
+.pp-box .pp-box-footer .pp-button {
+  font-size: 1.5em;
+  border: 0px;
+  width: 20%;
+  height: 79%;
+  overflow: hidden;
+  border-radius: 10%;
+  border: 1px solid white;
+}
+.pp-box .pp-box-footer .pp-button:hover {
+  box-shadow: 0px 0px 5px blue;
+}
+.pp-box .pp-box-footer .pp-box-left-button {
+  font-size: 1.5em;
+  border: 0px;
+  width: 20%;
+  height: 79%;
+  overflow: hidden;
+  border-radius: 10%;
+  border: 1px solid white;
+  margin-left: 50%;
+  margin-right: 5%;
+}
+.pp-box .pp-box-footer .pp-box-left-button:hover {
+  box-shadow: 0px 0px 5px blue;
+}
+.pp-box .pp-box-footer .pp-box-right-button {
+  font-size: 1.5em;
+  border: 0px;
+  width: 20%;
+  height: 79%;
+  overflow: hidden;
+  border-radius: 10%;
+  border: 1px solid white;
+}
+.pp-box .pp-box-footer .pp-box-right-button:hover {
+  box-shadow: 0px 0px 5px blue;
+}

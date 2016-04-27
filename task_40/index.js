@@ -1,14 +1,13 @@
 $(function(){
+    // 构造函数的实例
     var calender = new Calender();
     $("table thead tr td select").change(function(){
-        console.log("执行change");
+        // 选择新的日期时，将构造函数的date也做出相应的干煸
         calender.clear = 1;
         calender.date.setFullYear(parseInt($("table thead tr td .year").val()));
         calender.date.setMonth(parseInt($("table thead tr td .month").val())-1);
-        console.log(calender.date);
         calender.current(calender.date);
     });
-
     calender.current();
 });
 
@@ -17,10 +16,12 @@ $(function(){
  * @param date{year,month,day}
  */
 Calender.prototype.createCalender = function(date) {
+    // 只有第一次加载日历的时候添加两个select
     if(this.clear === 0) {
         this.createYear(date);
         this.createMonth(date);
     }
+    // 更新table中tbody的内容
     this.createTable(date);
 };
 
@@ -80,18 +81,16 @@ Calender.prototype.createTable = function(date){
         day = 1,
         i,
         j;
-    console.log(weekDay);
-    console.log(monthDays);
-    console.log(weeks);
-    /**
-     * 用weeks遍历显示tbody，从row[1]--row[weeks](row[0]用来显示一--日)
-     * row[1]:较特殊，需要控制1在第一格
-     * row[2]-row[weeks]:最后一行注意显示到monthDays即可
-     */
+
+    // 选择其他日期时删除以前table
      if(this.clear === 1){
          this.deleteTable(tbody);
      }
-     console.log("new");
+     /**
+      * 用weeks遍历显示tbody，从row[1]--row[weeks](row[0]用来显示一--日)
+      * row[1]:较特殊，需要控制1在第一格
+      * row[2]-row[weeks]:最后一行注意显示到monthDays即可
+      */
     for(i = 1;i <= weeks;i++) {
         if(i === 1){
             tbody.insertRow(i);
@@ -117,9 +116,12 @@ Calender.prototype.createTable = function(date){
             }
         }
     }
-
-
 };
+
+/**
+ * 删除表格中显示日期的部分
+ * @param tbody
+*/
 Calender.prototype.deleteTable = function(tbody){
     console.log("delete");
     var len = tbody.children.length,
@@ -130,6 +132,7 @@ Calender.prototype.deleteTable = function(tbody){
         tbody.removeChild(tbody.children[1]);
     }
 };
+
 /**
  * 得到所选月第一天对应星期几
  * @param date{year,month,day}
@@ -139,6 +142,7 @@ Calender.prototype.getFirstDay = function(date){
         weekDay = dateThisMonth.getDay();
     return weekDay;
 };
+
 /**
  * 得到所选月第一天对应星期几
  * 参数-date：所选日期
@@ -174,12 +178,20 @@ Calender.prototype.calMonthDay = function(date){
     return monthDays;
 };
 
+/**
+ * 构造函数Calender
+ * date为当前日期
+ * clear用于控制是否为初次加载和选择
+*/
 function Calender(){
-    console.log("执行构造函数");
     this.date = new Date();
     this.clear = 0;
 }
 
+/**
+ * 得到所选月第一天对应星期几
+ * 参数-date：所选日期
+*/
 Calender.prototype.current = function(){
     console.log("执行原型current");
     var today = {};

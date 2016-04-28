@@ -21,16 +21,16 @@ var datas = [
   	total: 230
   }
 ];
-function creatTable() {
+function creatTable() {//根据数据生成table
   table = document.getElementsByTagName("table")[0];
 
-  if (table.childNodes.length > 2) {
+  if (table.childNodes.length > 2) {//清空table
     for (var i = 0; i < table.childNodes.length; i++) {
       table.removeChild(table.childNodes[2]);
     }
   }
 
-  for (var i = 0; i < datas.length; i++) {
+  for (var i = 0; i < datas.length; i++) {//将数据添加到table
     var tr = document.createElement("tr");
     var td1 = document.createElement("td");
     td1.innerHTML=datas[i].name;
@@ -50,7 +50,7 @@ function creatTable() {
     table.appendChild(tr);
   }
 }
-function asc(id) {
+function asc(id) {//升序排序
   if (id == "Chinese") {
     for (var i = 0; i < datas.length; i++) {
       for (var j = i+1; j < datas.length; j++) {
@@ -97,7 +97,7 @@ function asc(id) {
   }
   creatTable();
 }
-function des(id) {
+function des(id) {//降序排序
   if (id == "Chinese") {
     for (var i = 0; i < datas.length; i++) {
       for (var j = i+1; j < datas.length; j++) {
@@ -144,7 +144,7 @@ function des(id) {
   }
   creatTable();
 }
-function init() {
+function init() {//初始化，绑定click事件
   // for (var i = 0; i < 4; i++) {
   //   var parent = document.getElementsByClassName("asc")[i].parentNode
   //   console.log(parent.id);

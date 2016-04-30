@@ -19,6 +19,90 @@ var datas = [
   	math: 100,
   	english: 70,
   	total: 230
+  },
+  {
+  	name: '小明',
+  	chinese: 80,
+  	math: 90,
+  	english: 70,
+  	total: 240
+  },
+  {
+  	name: '小红',
+  	chinese: 90,
+  	math: 60,
+  	english: 90,
+  	total: 240
+  },
+  {
+  	name: '小亮',
+  	chinese: 60,
+  	math: 100,
+  	english: 70,
+  	total: 230
+  },
+  {
+  	name: '小明',
+  	chinese: 80,
+  	math: 90,
+  	english: 70,
+  	total: 240
+  },
+  {
+  	name: '小红',
+  	chinese: 90,
+  	math: 60,
+  	english: 90,
+  	total: 240
+  },
+  {
+  	name: '小亮',
+  	chinese: 60,
+  	math: 100,
+  	english: 70,
+  	total: 230
+  },
+  {
+  	name: '小明',
+  	chinese: 80,
+  	math: 90,
+  	english: 70,
+  	total: 240
+  },
+  {
+  	name: '小红',
+  	chinese: 90,
+  	math: 60,
+  	english: 90,
+  	total: 240
+  },
+  {
+  	name: '小亮',
+  	chinese: 60,
+  	math: 100,
+  	english: 70,
+  	total: 230
+  },
+  {
+  	name: '小明',
+  	chinese: 80,
+  	math: 90,
+  	english: 70,
+  	total: 240
+  },
+  {
+  	name: '小红',
+  	chinese: 90,
+  	math: 60,
+  	english: 90,
+  	total: 240
+  },
+  {
+  	name: '小亮',
+  	chinese: 60,
+  	math: 100,
+  	english: 70,
+  	total: 230
   }
 ];
 function creatTable() {
@@ -151,6 +235,7 @@ function des(id) {
   }
   creatTable();
 }
+
 function init() {
   document.getElementsByClassName("asc")[0].onclick=function(){asc("Chinese")};
   document.getElementsByClassName("des")[0].onclick=function(){des("Chinese")};
@@ -161,6 +246,23 @@ function init() {
   document.getElementsByClassName("asc")[3].onclick=function(){asc("Total")};
   document.getElementsByClassName("des")[3].onclick=function(){des("Total")};
   creatTable();
+
+  window.onscroll = function(){
+      var top = document.documentElement.scrollTop || document.body.scrollTop,
+          trs = document.getElementsByTagName('tr')[0],
+          offsetTop = tables.offsetTop,
+          height = tables.offsetHeight,
+          left = tables.offsetLeft;
+
+     console.log('offsetTop:'+offsetTop+',height:'+height+'left:'+left);
+     if(top > offsetTop && top < offsetTop+height) {
+         trs.style.top = "0px";
+         trs.style.left = left+"px";
+         trs.style.position = "fixed";
+     } else{
+         trs.style.position = "relative";
+     }
+  };
 }
 
 init();

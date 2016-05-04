@@ -1,0 +1,37 @@
+table {
+  border-style: solid;
+  border-color: silver;
+  border-collapse: collapse;
+  width: 620px;
+}
+#thead th{
+  background-color: #282828;
+  color: #FFFFFF;
+  width: 120px;
+  height: 40px;
+}
+#thead .title {
+  width: 100px;
+  float: left;
+}
+#thead .sort {
+  width: 20px;
+  float: left;
+}
+#thead .asc {
+  width:0;
+  height:0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #FFFFFF;
+}
+#thead .des {
+  width:0;
+  height:0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #FFFFFF;
+}
+#thead .middle {
+  height: 5px;
+}

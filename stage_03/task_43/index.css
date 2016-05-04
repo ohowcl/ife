@@ -1,0 +1,7 @@
+.album-container {
+    position: relative;
+    overflow: hidden;
+}
+.album-container div {
+    outline: 1px solid white;
+}

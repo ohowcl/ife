@@ -1,0 +1,24 @@
+*{
+    font-family: SimHei;
+}
+#calander{
+    position: absolute;
+    overflow: auto;
+    border-radius: 5px;
+    border: 2px solid #eaeaea;
+    empty-cells: show;
+    top: 100px;
+    left: 300px;
+}
+.tr{
+    height: 40px;
+    width: auto;
+}
+.td{
+    width: 45px;
+    text-align: center;
+}
+select{
+    width: 95%;
+    height:90%;
+}
